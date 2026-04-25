@@ -57,17 +57,39 @@
                 <a href="privada.html" class="text-earth border border-earth/30 px-3 py-1 rounded-sm hover:bg-earth/10 transition-all">ÁREA PRIVADA</a>
             </nav>
 
-            <div class="flex items-center gap-4">
+            <div class="flex items-center gap-3 md:gap-4">
                 <a href="https://www.instagram.com/nicolobosss/" target="_blank" rel="noopener noreferrer">
-                    <img src="logo_instagram.png" class="w-10 h-10">
+                    <img src="logo_instagram.png" alt="Instagram" class="w-9 h-9 md:w-10 md:h-10 object-contain">
                 </a>
+
                 <a href="https://www.tiktok.com/@nicolaslobos" target="_blank" rel="noopener noreferrer">
-                    <img src="logo_tiktok.png" class="w-10 h-10">
+                    <img src="logo_tiktok.png" alt="TikTok" class="w-9 h-9 md:w-10 md:h-10 object-contain">
                 </a>
+
                 <a href="https://wa.me/56978354063?text=Vi%20tu%20p%C3%A1gina%20WEB%20y%20me%20interesa%20tu%20asesor%C3%ADa" target="_blank" rel="noopener noreferrer">
-                    <img src="logo_wsp.png" class="w-10 h-10">
+                    <img src="logo_wsp.png" alt="WhatsApp" class="w-9 h-9 md:w-10 md:h-10 object-contain">
                 </a>
+
+                <button id="mobile-menu-btn" 
+                        class="lg:hidden text-white border border-white/10 p-2 rounded-sm ml-1"
+                        aria-label="Abrir menú móvil"
+                        aria-expanded="false"
+                        aria-controls="mobile-menu">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
             </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden absolute top-20 left-0 w-full bg-black border-t border-white/10 px-6 py-6 shadow-2xl">
+            <nav class="flex flex-col gap-5 text-[12px] font-black uppercase tracking-[0.2em] text-zinc-300">
+                <a href="index.html" class="hover:text-earth transition-colors">INICIO</a>
+                <a href="metodo.html" class="hover:text-earth transition-colors">METODOLOGÍA</a>
+                <a href="comunidad.html" class="text-white hover:text-earth transition-colors">COMUNIDAD</a>
+                <a href="noticias.html" class="hover:text-earth transition-colors">NOTICIAS</a>
+                <a href="descargas.html" class="hover:text-earth transition-colors">DESCARGAS</a>
+                <a href="tienda.html" class="hover:text-earth transition-colors">TIENDA</a>
+                <a href="privada.html" class="text-earth border border-earth/30 px-3 py-3 rounded-sm text-center hover:bg-earth/10 transition-all">ÁREA PRIVADA</a>
+            </nav>
         </div>
     </header>
 
@@ -118,10 +140,10 @@
                 </h2>
 
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <img src="01_Nicolas.png" class="h-64 object-cover grayscale hover:grayscale-0 transition">
-                    <img src="03_Nicolas.png" class="h-64 object-cover grayscale hover:grayscale-0 transition">
-                    <img src="06_Nicolas.png" class="h-64 object-cover grayscale hover:grayscale-0 transition">
-                    <img src="08_Nicolas.png" class="h-64 object-cover grayscale hover:grayscale-0 transition">
+                    <img src="01_Nicolas.png" alt="Entrenamiento comunidad" class="h-64 object-cover grayscale hover:grayscale-0 transition">
+                    <img src="03_Nicolas.png" alt="Entrenamiento comunidad" class="h-64 object-cover grayscale hover:grayscale-0 transition">
+                    <img src="06_Nicolas.png" alt="Entrenamiento comunidad" class="h-64 object-cover grayscale hover:grayscale-0 transition">
+                    <img src="08_Nicolas.png" alt="Entrenamiento comunidad" class="h-64 object-cover grayscale hover:grayscale-0 transition">
                 </div>
             </section>
 
@@ -148,7 +170,10 @@
     <!-- FOOTER -->
     <footer class="py-16 bg-black px-6 text-center border-t border-white/5">
         <p class="text-[12px] text-white uppercase tracking-[0.2em]">
-            <a href="https://www.instagram.com/nicolobosss/" target="_blank" class="font-black hover:text-zinc-300">
+            <a href="https://www.instagram.com/nicolobosss/" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               class="font-black hover:text-zinc-300 transition-colors">
                 @nicolobosss
             </a>
         </p>
@@ -159,12 +184,24 @@
 
     <!-- BOTÓN WHATSAPP -->
     <a href="https://wa.me/56978354063?text=Vi%20tu%20p%C3%A1gina%20WEB%20y%20me%20interesa%20tu%20asesor%C3%ADa"
-       class="fixed bottom-10 right-10 bg-[#25D366] text-white p-5 rounded-full hover:scale-110">
+       target="_blank"
+       rel="noopener noreferrer"
+       class="fixed bottom-10 right-10 bg-[#25D366] text-white p-5 rounded-full hover:scale-110 transition-all z-[200]">
         <i data-lucide="message-circle" class="w-8 h-8"></i>
     </a>
 
     <script>
         lucide.createIcons();
+
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                const isHidden = mobileMenu.classList.toggle('hidden');
+                mobileMenuBtn.setAttribute('aria-expanded', String(!isHidden));
+            });
+        }
 
         function getMantra() {
             const input = document.getElementById('ai-input').value;
