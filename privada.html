@@ -23,6 +23,12 @@
         .text-earth { color: #8C7851; }
         .bg-earth { background-color: #8C7851; }
 
+        .glass { 
+            background: rgba(255, 255, 255, 0.03); 
+            backdrop-blur: 10px; 
+            border: 1px solid rgba(255, 255, 255, 0.06); 
+        }
+
         .btn-premium { 
             background-color: #8C7851; 
             transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1); 
@@ -36,7 +42,7 @@
     </style>
 </head>
 
-<body class="overflow-x-hidden flex flex-col min-h-screen">
+<body class="overflow-x-hidden">
 
     <header class="fixed top-0 w-full z-[100] bg-black border-b border-white/5 h-20 flex items-center">
         <div class="max-w-7xl mx-auto px-6 w-full flex justify-between items-center">
@@ -91,54 +97,196 @@
         </div>
     </header>
 
-    <main class="flex-grow flex items-center justify-center pt-32 pb-24 px-6">
-        <div class="max-w-4xl mx-auto text-center space-y-12 w-full">
-            
-            <div class="relative w-full max-w-3xl mx-auto rounded-sm overflow-hidden border border-white/10 shadow-2xl group">
-                <img src="05_Nicolas.png" 
-                     alt="Entrenamiento personalizado Nicolás Lobos" 
-                     class="w-full h-[400px] object-cover grayscale opacity-70 group-hover:grayscale-0 transition-all duration-700">
+    <main class="pt-40 pb-24 px-6">
+        <div class="max-w-7xl mx-auto space-y-28">
 
-                <div class="absolute inset-0 bg-gradient-to-t from-[#080808] via-[#080808]/30 to-transparent"></div>
+            <section class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-8 text-center lg:text-left">
+                    <span class="inline-block text-earth text-[10px] font-black uppercase tracking-[0.35em]">
+                        Portal privado
+                    </span>
 
-                <div class="absolute bottom-6 left-0 right-0 text-center">
-                    <div class="inline-block px-4 py-1 border border-earth/30 bg-earth/90 text-black text-[9px] font-black uppercase tracking-[0.45em] rounded-full italic">
-                        En construcción
+                    <h1 class="text-5xl md:text-6xl font-black uppercase italic tracking-tighter leading-tight">
+                        Tu espacio de <br>
+                        <span class="text-earth">alto rendimiento.</span>
+                    </h1>
+
+                    <p class="text-zinc-400 text-lg leading-relaxed font-light max-w-xl mx-auto lg:mx-0">
+                        Un ecosistema digital exclusivo para clientes activos: agenda, seguimiento físico, evolución visual y comunicación centralizada.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <button disabled class="px-10 py-5 rounded-sm border border-white/10 text-zinc-500 font-black uppercase text-[10px] tracking-widest cursor-not-allowed">
+                            Acceso próximamente
+                        </button>
+
+                        <a href="https://wa.me/56978354063?text=Vi%20tu%20p%C3%A1gina%20WEB%20y%20quiero%20solicitar%20acceso%20al%20portal%20privado" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="btn-premium text-white px-10 py-5 rounded-sm font-black uppercase text-[10px] tracking-widest inline-flex items-center justify-center gap-3">
+                            Solicitar acceso
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        </a>
                     </div>
                 </div>
-            </div>
 
-            <div class="space-y-6 max-w-2xl mx-auto">
+                <div class="relative w-full rounded-sm overflow-hidden border border-white/10 shadow-2xl group">
+                    <img src="05_Nicolas.png" 
+                         alt="Portal privado Nicolás Lobos" 
+                         class="w-full h-[460px] object-cover grayscale opacity-75 group-hover:grayscale-0 transition-all duration-700">
+
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#080808] via-[#080808]/20 to-transparent"></div>
+
+                    <div class="absolute bottom-6 left-0 right-0 text-center">
+                        <div class="inline-block px-5 py-2 border border-earth/30 bg-earth/90 text-black text-[9px] font-black uppercase tracking-[0.35em] rounded-full italic">
+                            En desarrollo
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="space-y-12">
+                <div class="text-center space-y-4">
+                    <span class="text-earth text-[10px] font-black uppercase tracking-[0.35em]">
+                        Funcionalidades
+                    </span>
+
+                    <h2 class="text-3xl md:text-5xl font-black uppercase italic tracking-tighter">
+                        Todo tu proceso <span class="text-earth">en un solo lugar</span>
+                    </h2>
+
+                    <p class="text-zinc-500 text-base max-w-2xl mx-auto leading-relaxed">
+                        El portal está pensado para ordenar la información clave de tu entrenamiento y facilitar el seguimiento entre sesiones.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="glass p-7 rounded-xl space-y-5 hover:border-earth/30 transition-all">
+                        <i data-lucide="calendar-check" class="w-8 h-8 text-earth"></i>
+                        <h3 class="text-white text-lg font-black uppercase italic">Agenda y sesiones</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">
+                            Visualiza próximas citas, horarios disponibles y coordinación de seguimientos.
+                        </p>
+                    </div>
+
+                    <div class="glass p-7 rounded-xl space-y-5 hover:border-earth/30 transition-all">
+                        <i data-lucide="scan-body" class="w-8 h-8 text-earth"></i>
+                        <h3 class="text-white text-lg font-black uppercase italic">Perfil físico</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">
+                            Registro de medidas, composición corporal, evaluaciones y evolución morfológica.
+                        </p>
+                    </div>
+
+                    <div class="glass p-7 rounded-xl space-y-5 hover:border-earth/30 transition-all">
+                        <i data-lucide="images" class="w-8 h-8 text-earth"></i>
+                        <h3 class="text-white text-lg font-black uppercase italic">Progreso visual</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">
+                            Comparativos visuales, historial fotográfico y evidencia concreta de avances.
+                        </p>
+                    </div>
+
+                    <div class="glass p-7 rounded-xl space-y-5 hover:border-earth/30 transition-all">
+                        <i data-lucide="clipboard-check" class="w-8 h-8 text-earth"></i>
+                        <h3 class="text-white text-lg font-black uppercase italic">Plan y seguimiento</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">
+                            Objetivos semanales, indicaciones personalizadas y ajustes según tu progreso.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 text-center lg:text-left">
+                    <span class="text-earth text-[10px] font-black uppercase tracking-[0.35em]">
+                        Método de trabajo
+                    </span>
+
+                    <h2 class="text-3xl md:text-4xl font-black uppercase italic tracking-tighter">
+                        Del diagnóstico al <span class="text-earth">ajuste constante</span>
+                    </h2>
+
+                    <p class="text-zinc-400 leading-relaxed font-light">
+                        La tecnología no reemplaza el acompañamiento profesional: lo ordena, lo hace más claro y permite tomar mejores decisiones durante el proceso.
+                    </p>
+                </div>
+
+                <div class="glass p-8 rounded-xl">
+                    <div class="grid gap-5">
+                        <div class="flex gap-4 items-start">
+                            <span class="text-earth font-black text-xl">01</span>
+                            <div>
+                                <h3 class="text-white font-black uppercase text-sm">Evaluación inicial</h3>
+                                <p class="text-zinc-500 text-sm mt-1">Se define el punto de partida, objetivos y condiciones actuales.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 items-start">
+                            <span class="text-earth font-black text-xl">02</span>
+                            <div>
+                                <h3 class="text-white font-black uppercase text-sm">Plan personalizado</h3>
+                                <p class="text-zinc-500 text-sm mt-1">Se estructura una estrategia adaptada a tu nivel, edad, contexto y meta.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 items-start">
+                            <span class="text-earth font-black text-xl">03</span>
+                            <div>
+                                <h3 class="text-white font-black uppercase text-sm">Seguimiento periódico</h3>
+                                <p class="text-zinc-500 text-sm mt-1">Se revisa avance, adherencia, técnica y evolución física.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 items-start">
+                            <span class="text-earth font-black text-xl">04</span>
+                            <div>
+                                <h3 class="text-white font-black uppercase text-sm">Ajustes según progreso</h3>
+                                <p class="text-zinc-500 text-sm mt-1">El plan se modifica con criterio, no por improvisación.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="glass p-8 md:p-12 rounded-xl border-l-4 border-earth text-center space-y-6">
                 <span class="text-earth text-[10px] font-black uppercase tracking-[0.35em]">
-                    Próximamente
+                    Estado actual
                 </span>
 
-                <h1 class="text-4xl md:text-5xl font-black uppercase italic tracking-tighter leading-tight">
-                    Portal de <br>
-                    <span class="text-earth">Alto Rendimiento</span>
-                </h1>
-                
-                <p class="text-zinc-400 text-lg leading-relaxed font-light">
-                    Estamos desarrollando un ecosistema digital exclusivo para el Team Nicolás Lobos.
-                </p>
+                <h2 class="text-3xl md:text-4xl font-black uppercase italic tracking-tighter">
+                    Plataforma en construcción
+                </h2>
 
-                <p class="text-zinc-500 text-sm leading-relaxed">
-                    Muy pronto podrás acceder a tu panel personal para <b>agendar y gestionar tus citas</b>, revisar tu <b>perfil morfológico</b>, visualizar el progreso de tus <b>medidas y evolución física</b>, y coordinar tus próximos seguimientos de manera centralizada.
+                <p class="text-zinc-400 max-w-3xl mx-auto leading-relaxed">
+                    Estamos construyendo esta plataforma para clientes activos. Mientras tanto, la coordinación de sesiones, consultas y seguimiento se realiza directamente por WhatsApp.
                 </p>
-            </div>
-
-            <div class="pt-8 flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="index.html" class="inline-block border border-earth/50 text-earth hover:bg-earth/10 px-10 py-4 rounded-sm font-black uppercase text-[10px] tracking-widest transition-all">
-                    Volver al inicio
-                </a>
 
                 <a href="https://wa.me/56978354063?text=Vi%20tu%20p%C3%A1gina%20WEB%20y%20me%20interesa%20tu%20asesor%C3%ADa" 
                    target="_blank" 
                    rel="noopener noreferrer"
-                   class="inline-block btn-premium text-white px-10 py-4 rounded-sm font-black uppercase text-[10px] tracking-widest transition-all">
-                    Consultar por WhatsApp
+                   class="inline-flex items-center justify-center gap-3 bg-[#25D366] text-white px-10 py-5 rounded-sm font-black uppercase text-[10px] tracking-widest hover:brightness-110 transition-all">
+                    Coordinar por WhatsApp
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
                 </a>
-            </div>
+            </section>
+
+            <section class="text-center space-y-6">
+                <h2 class="text-4xl md:text-5xl font-black uppercase italic tracking-tighter">
+                    ¿Quieres formar parte del <span class="text-earth">Team?</span>
+                </h2>
+
+                <p class="text-zinc-500 max-w-2xl mx-auto leading-relaxed">
+                    Agenda tu diagnóstico inicial y recibe orientación personalizada para comenzar con una estrategia clara.
+                </p>
+
+                <a href="https://wa.me/56978354063?text=Quiero%20agendar%20un%20diagn%C3%B3stico%20inicial" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="btn-premium inline-flex text-white px-12 py-5 rounded-sm font-black uppercase text-[10px] tracking-widest items-center justify-center gap-3">
+                    Agendar diagnóstico
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </section>
+
         </div>
     </main>
 
