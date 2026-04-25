@@ -61,19 +61,39 @@
                 <a href="privada.html" class="text-earth border border-earth/30 px-3 py-1 rounded-sm hover:bg-earth/10 transition-all">ÁREA PRIVADA</a>
             </nav>
 
-            <div class="flex items-center gap-4">
+            <div class="flex items-center gap-3 md:gap-4">
                 <a href="https://www.instagram.com/nicolobosss/" target="_blank" rel="noopener noreferrer" class="hover:scale-110 transition-transform opacity-80 hover:opacity-100">
-                    <img src="logo_instagram.png" alt="Instagram" class="w-10 h-10 object-contain">
+                    <img src="logo_instagram.png" alt="Instagram" class="w-9 h-9 md:w-10 md:h-10 object-contain">
                 </a>
 
                 <a href="https://www.tiktok.com/@nicolaslobos" target="_blank" rel="noopener noreferrer" class="hover:scale-110 transition-transform opacity-80 hover:opacity-100">
-                    <img src="logo_tiktok.png" alt="TikTok" class="w-10 h-10 object-contain">
+                    <img src="logo_tiktok.png" alt="TikTok" class="w-9 h-9 md:w-10 md:h-10 object-contain">
                 </a>
 
-                <a href="https://wa.me/56978354063?text=Vi%20tu%20p%C3%A1gina%20WEB%20y%20me%20interesa%20tu%20asesor%C3%ADa" target="_blank" rel="noopener noreferrer" class="hover:scale-110 transition-transform opacity-80 hover:opacity-100 ml-1">
-                    <img src="logo_wsp.png" alt="WhatsApp" class="w-10 h-10 object-contain">
+                <a href="https://wa.me/56978354063?text=Vi%20tu%20p%C3%A1gina%20WEB%20y%20me%20interesa%20tu%20asesor%C3%ADa" target="_blank" rel="noopener noreferrer" class="hover:scale-110 transition-transform opacity-80 hover:opacity-100">
+                    <img src="logo_wsp.png" alt="WhatsApp" class="w-9 h-9 md:w-10 md:h-10 object-contain">
                 </a>
+
+                <button id="mobile-menu-btn" 
+                        class="lg:hidden text-white border border-white/10 p-2 rounded-sm ml-1"
+                        aria-label="Abrir menú móvil"
+                        aria-expanded="false"
+                        aria-controls="mobile-menu">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
             </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden absolute top-20 left-0 w-full bg-black border-t border-white/10 px-6 py-6 shadow-2xl">
+            <nav class="flex flex-col gap-5 text-[12px] font-black uppercase tracking-[0.2em] text-zinc-300">
+                <a href="index.html" class="hover:text-earth transition-colors">INICIO</a>
+                <a href="metodo.html" class="hover:text-earth transition-colors">METODOLOGÍA</a>
+                <a href="comunidad.html" class="hover:text-earth transition-colors">COMUNIDAD</a>
+                <a href="noticias.html" class="hover:text-earth transition-colors">NOTICIAS</a>
+                <a href="descargas.html" class="text-white hover:text-earth transition-colors">DESCARGAS</a>
+                <a href="tienda.html" class="hover:text-earth transition-colors">TIENDA</a>
+                <a href="privada.html" class="text-earth border border-earth/30 px-3 py-3 rounded-sm text-center hover:bg-earth/10 transition-all">ÁREA PRIVADA</a>
+            </nav>
         </div>
     </header>
 
@@ -157,7 +177,7 @@
                         <h3 class="text-xl font-black uppercase italic text-white">Movilidad articular</h3>
                         <p class="text-zinc-400 text-sm leading-relaxed">Rutina de preparación de 10 minutos previa al entrenamiento de alta intensidad.</p>
                     </div>
-                    <a href="documento_6.png" download class="btn-premium text-white py-4 rounded-sm font-black uppercase text-[10px] tracking-widest text-center inline-flex items-center justify-center gap-2">
+                    <a href="documento_6.pdf" download class="btn-premium text-white py-4 rounded-sm font-black uppercase text-[10px] tracking-widest text-center inline-flex items-center justify-center gap-2">
                         Descargar PDF <i data-lucide="download" class="w-4 h-4"></i>
                     </a>
                 </div>
@@ -223,6 +243,16 @@
 
     <script>
         lucide.createIcons();
+
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                const isHidden = mobileMenu.classList.toggle('hidden');
+                mobileMenuBtn.setAttribute('aria-expanded', String(!isHidden));
+            });
+        }
     </script>
 
 </body>
