@@ -1,133 +1,205 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Técnica Antes que el Ego | Nicolas Lobos</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-        body { font-family: 'Montserrat', sans-serif; background-color: #080808; color: #e5e5e5; }
-        .text-earth { color: #8C7851; }
-        .bg-earth { background-color: #8C7851; }
-        .glass { background: rgba(255, 255, 255, 0.03); backdrop-blur: 10px; border: 1px solid rgba(255, 255, 255, 0.05); }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Técnica Antes que el Ego | Nicolás Lobos</title>
+
+<link rel="icon" type="image/png" href="favicon.png">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<style>
+body { font-family:'Montserrat',sans-serif;background:#080808;color:#e5e5e5;}
+.text-earth{color:#8C7851;}
+.glass{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);}
+</style>
 </head>
+
 <body class="overflow-x-hidden">
 
-    <header class="fixed top-0 w-full z-[100] bg-black border-b border-white/5 h-20 flex items-center">
-        <div class="max-w-7xl mx-auto px-6 w-full flex justify-between items-center">
-            <a href="index.html" class="text-xl md:text-2xl font-black tracking-tighter uppercase text-white">NICOLAS<span class="text-earth">LOBOS</span></a>
-            <nav class="hidden lg:flex space-x-8 text-[10px] font-black uppercase tracking-[0.2em] items-center text-zinc-400">
-                <a href="index.html" class="hover:text-earth transition-colors">INICIO</a>
-                <a href="metodo.html" class="hover:text-earth transition-colors">METODOLOGIA</a>
-                <a href="comunidad.html" class="hover:text-earth transition-colors">COMUNIDAD</a>
-                <a href="noticias.html" class="text-white hover:text-earth transition-colors">NOTICIAS</a>
-                <a href="descargas.html" class="hover:text-earth transition-colors">DESCARGAS</a>
-                <a href="tienda.html" class="hover:text-earth transition-colors">TIENDA</a>
-                <a href="privada.html" class="text-earth border border-earth/30 px-3 py-1 rounded-sm hover:bg-earth/10 transition-all">AREA PRIVADA</a>
-            </nav>
-            <div class="flex items-center gap-4">
-                <a href="https://www.instagram.com/nicolobosss" target="_blank" class="hover:scale-110 transition-transform"><img src="logo_instagram.png" alt="Insta" class="w-5 h-5"></a>
-                <a href="https://www.tiktok.com/@nicolaslobos" target="_blank" class="hover:scale-110 transition-transform"><img src="logo_tiktok.png" alt="TikTok" class="w-5 h-5"></a>
-                <a href="https://wa.me/56978354063?text=Vi%20tu%20pagina%20WEB%20me%20intersa%20tu%20asesoria" target="_blank" class="hover:scale-110 transition-transform"><img src="logo_wsp.png" alt="Wsp" class="w-5 h-5"></a>
-            </div>
-        </div>
-    </header>
+<!-- HEADER -->
+<header class="fixed top-0 w-full bg-black border-b border-white/5 h-20 flex items-center z-50">
+<div class="max-w-7xl mx-auto px-6 w-full flex justify-between">
 
-    <main class="pt-32 pb-24 px-6">
-        <article class="max-w-4xl mx-auto space-y-12">
-            
-            <div class="space-y-6 text-center">
-                <a href="noticias.html" class="inline-flex items-center gap-2 text-earth text-[10px] font-black uppercase tracking-widest hover:text-white transition-colors mb-4">
-                    <i data-lucide="arrow-left" class="w-4 h-4"></i> Volver a Noticias
-                </a>
-                <h1 class="text-4xl md:text-6xl font-black uppercase italic tracking-tighter leading-tight">
-                    La Técnica Antes que el Ego: <br><span class="text-earth">El Factor que Define tu Progreso</span>
-                </h1>
-                <div class="flex items-center justify-center gap-4 text-zinc-500 text-xs font-bold uppercase tracking-widest">
-                    <span>Por Nicolas Lobos</span> | <span>Prevención de Lesiones</span>
-                </div>
-            </div>
+<a href="index.html" class="font-black text-white text-xl">
+NICOLÁS<span class="text-earth">LOBOS</span>
+</a>
 
-            <!-- Imagen Vertical Adaptada -->
-            <div class="w-full max-w-2xl mx-auto overflow-hidden rounded-sm border border-white/10 shadow-2xl">
-                <img src="01_Nicolas.png" alt="Control de Técnica" class="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700">
-            </div>
+<nav class="hidden lg:flex space-x-8 text-xs uppercase text-zinc-400">
+<a href="index.html">Inicio</a>
+<a href="metodo.html">Metodología</a>
+<a href="comunidad.html">Comunidad</a>
+<a href="noticias.html" class="text-white border-b border-earth">Noticias</a>
+<a href="descargas.html">Descargas</a>
+<a href="tienda.html">Tienda</a>
+</nav>
 
-            <div class="prose prose-invert prose-lg max-w-none text-zinc-400 font-light leading-relaxed space-y-8">
-                <p class="text-xl text-white font-medium italic border-l-4 border-earth pl-6">
-                    En el entrenamiento de fuerza, hay una trampa silenciosa que atrapa incluso a personas disciplinadas: confundir progreso con levantar más peso.
-                </p>
-                <p>El ego empuja a cargar más… pero el cuerpo paga la factura después. Porque cuando la técnica falla, el entrenamiento deja de ser una herramienta de mejora y se convierte en un riesgo acumulativo.</p>
+<div class="flex gap-4">
+<a href="https://www.instagram.com/nicolobosss/" target="_blank"><img src="logo_instagram.png" class="w-8"></a>
+<a href="https://www.tiktok.com/@nicolaslobos" target="_blank"><img src="logo_tiktok.png" class="w-8"></a>
+<a href="https://wa.me/56978354063?text=Vi%20tu%20p%C3%A1gina%20WEB%20y%20me%20interesa%20tu%20asesor%C3%ADa" target="_blank"><img src="logo_wsp.png" class="w-8"></a>
+</div>
 
-                <h2 class="text-2xl font-black text-white uppercase italic tracking-tight pt-8 border-t border-white/10">El verdadero problema: progreso mal interpretado</h2>
-                <p>Levantar más peso no siempre significa mejorar. De hecho, cuando se sacrifica la técnica:</p>
-                <ul class="space-y-3 list-none pl-0">
-                    <li class="flex items-start gap-3"><i data-lucide="alert-circle" class="w-5 h-5 text-red-500"></i> Se reduce la activación muscular real</li>
-                    <li class="flex items-start gap-3"><i data-lucide="alert-circle" class="w-5 h-5 text-red-500"></i> Se generan compensaciones biomecánicas</li>
-                    <li class="flex items-start gap-3"><i data-lucide="alert-circle" class="w-5 h-5 text-red-500"></i> Se sobrecargan articulaciones vulnerables</li>
-                    <li class="flex items-start gap-3"><i data-lucide="alert-circle" class="w-5 h-5 text-red-500"></i> Se instala un patrón de movimiento defectuoso</li>
-                </ul>
-                <p class="font-bold text-white"><i data-lucide="info" class="inline w-5 h-5 text-earth"></i> Y lo más crítico: ese error se repite… cientos de veces.</p>
+</div>
+</header>
 
-                <h2 class="text-2xl font-black text-white uppercase italic tracking-tight pt-8 border-t border-white/10">Lo que dice la evidencia reciente</h2>
-                <div class="glass p-6 rounded-sm space-y-6">
-                    <div class="space-y-2">
-                        <p class="text-sm">Un análisis biomecánico de la <b>University of Queensland (2024)</b> demostró que pequeñas desviaciones técnicas aumentan el estrés articular, especialmente en rodillas y hombros.</p>
-                        <a href="https://research.uq.edu.au/strength-biomechanics-2024" target="_blank" class="text-earth text-xs uppercase font-bold"><i data-lucide="link" class="inline w-3 h-3"></i> research.uq.edu.au</a>
-                    </div>
-                    <div class="space-y-2">
-                        <p class="text-sm">Investigaciones del <b>Journal of Sports Sciences (2023)</b> encontraron que la supervisión profesional mejora la calidad del movimiento y reduce el riesgo de lesión.</p>
-                        <a href="https://www.tandfonline.com/toc/rjsp20" target="_blank" class="text-earth text-xs uppercase font-bold"><i data-lucide="link" class="inline w-3 h-3"></i> tandfonline.com</a>
-                    </div>
-                    <div class="space-y-2">
-                        <p class="text-sm">Estudios de la <b>National Strength and Conditioning Association (2025)</b> concluyen que la correcta ejecución técnica tiene mayor impacto en resultados a largo plazo.</p>
-                        <a href="https://www.nsca.com/research" target="_blank" class="text-earth text-xs uppercase font-bold"><i data-lucide="link" class="inline w-3 h-3"></i> nsca.com/research</a>
-                    </div>
-                </div>
+<!-- CONTENIDO -->
+<main class="pt-32 pb-24 px-6">
+<article class="max-w-4xl mx-auto space-y-12">
 
-                <h2 class="text-2xl font-black text-white uppercase italic tracking-tight pt-8 border-t border-white/10">El error más común (y más peligroso)</h2>
-                <p>Pensar que “mientras levantes, cuenta”. Cuando en realidad:</p>
-                <ul class="space-y-3 list-none pl-0">
-                    <li class="flex items-start gap-3"><i data-lucide="x" class="w-5 h-5 text-zinc-500"></i> Un squat mal ejecutado no entrena piernas correctamente</li>
-                    <li class="flex items-start gap-3"><i data-lucide="x" class="w-5 h-5 text-zinc-500"></i> Un press mal hecho no desarrolla pecho como debería</li>
-                    <li class="flex items-start gap-3"><i data-lucide="x" class="w-5 h-5 text-zinc-500"></i> Un peso muerto con mala técnica puede dañar la zona lumbar</li>
-                </ul>
-                <p class="font-bold text-white text-xl">No es solo ineficiente. Es acumulativamente dañino.</p>
+<!-- HERO -->
+<div class="text-center space-y-6">
+<a href="noticias.html" class="text-earth text-xs uppercase">← Volver</a>
 
-                <h2 class="text-2xl font-black text-white uppercase italic tracking-tight pt-8 border-t border-white/10">¿Por qué la supervisión profesional marca la diferencia?</h2>
-                <p>Porque el cuerpo no se autoevalúa bien bajo esfuerzo. Un entrenador experimentado:</p>
-                <div class="bg-earth/5 border border-earth/20 p-6 rounded-sm">
-                    <ul class="list-none space-y-2 text-white font-medium pl-0">
-                        <li>Detecta errores que tú no percibes</li>
-                        <li>Ajusta la técnica en tiempo real</li>
-                        <li>Evita que consolides malos hábitos</li>
-                        <li>Acelera el aprendizaje motor</li>
-                    </ul>
-                </div>
-                <p class="text-xl font-black text-center text-white italic pt-4">Es una inversión en progreso… y en salud.</p>
+<h1 class="text-4xl md:text-6xl font-black uppercase italic">
+La técnica antes que el ego<br>
+<span class="text-earth">El factor que define tu progreso</span>
+</h1>
 
-                <h2 class="text-2xl font-black text-white uppercase italic tracking-tight pt-8 border-t border-white/10">¿Cómo aplicar este principio?</h2>
-                <ul class="space-y-3 list-none pl-0">
-                    <li class="flex items-start gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-earth"></i> Prioriza ejecución sobre peso</li>
-                    <li class="flex items-start gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-earth"></i> Grábate o busca feedback constante</li>
-                    <li class="flex items-start gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-earth"></i> Reduce carga si pierdes control técnico</li>
-                    <li class="flex items-start gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-earth"></i> Trabaja rangos completos y controlados</li>
-                </ul>
+<div class="text-zinc-500 text-xs uppercase">
+Nicolás Lobos · Prevención de lesiones
+</div>
+</div>
 
-                <p class="text-2xl font-black text-center text-white italic pt-6 border-y border-white/10 py-8 my-8">
-                    Si tu técnica se rompe, esa repetición no suma. <br><span class="text-red-500">Resta.</span>
-                </p>
+<!-- IMAGEN -->
+<div class="max-w-2xl mx-auto border border-white/10">
+<img src="01_Nicolas.png" class="grayscale hover:grayscale-0 transition">
+</div>
 
-                <h2 class="text-2xl font-black text-white uppercase italic tracking-tight pt-8">Conclusión</h2>
-                <p>El ego construye números. La técnica construye resultados. Y más importante aún: la técnica protege tu cuerpo para que puedas seguir entrenando en el tiempo.</p>
-            </div>
+<!-- TEXTO -->
+<div class="space-y-8 text-zinc-400">
 
-        </article>
-    </main>
+<p class="text-xl text-white italic border-l-4 border-earth pl-6">
+Si llevas meses entrenando, subiendo peso… pero tu cuerpo no cambia o te duele algo constantemente, hay algo que no estás viendo.
+</p>
 
-    <script>lucide.createIcons();</script>
+<p>
+El problema no siempre es la intensidad. Muchas veces es la técnica.
+</p>
+
+<p class="text-white font-bold">
+El ego te hace levantar más. La técnica te hace progresar.
+</p>
+
+<h2 class="text-2xl text-white font-black uppercase border-t pt-6">
+El problema real
+</h2>
+
+<ul class="space-y-2">
+<li>✖ Compensaciones invisibles</li>
+<li>✖ Activación incorrecta</li>
+<li>✖ Sobrecarga articular</li>
+<li>✖ Patrones defectuosos</li>
+</ul>
+
+<p class="text-white">
+Y lo peor: repites ese error cientos de veces.
+</p>
+
+<!-- EVIDENCIA -->
+<h2 class="text-2xl text-white font-black uppercase border-t pt-6">
+Evidencia científica
+</h2>
+
+<div class="glass p-6 space-y-6">
+
+<div>
+<p>University of Queensland (2024): pequeñas fallas técnicas aumentan estrés articular.</p>
+<a href="https://research.uq.edu.au/strength-biomechanics-2024" target="_blank" class="text-earth text-xs">Ver estudio</a>
+</div>
+
+<div>
+<p>Journal of Sports Sciences (2023): supervisión mejora técnica y reduce lesiones.</p>
+<a href="https://www.tandfonline.com/toc/rjsp20" target="_blank" class="text-earth text-xs">Ver estudio</a>
+</div>
+
+<div>
+<p>NSCA (2025): técnica correcta impacta más que el peso en resultados.</p>
+<a href="https://www.nsca.com/research" target="_blank" class="text-earth text-xs">Ver estudio</a>
+</div>
+
+</div>
+
+<h2 class="text-2xl text-white font-black uppercase border-t pt-6">
+Error común
+</h2>
+
+<p>
+Pensar que levantar más es avanzar.
+</p>
+
+<ul class="space-y-2">
+<li>✖ Squat mal hecho ≠ piernas</li>
+<li>✖ Press mal hecho ≠ pecho</li>
+<li>✖ Deadlift mal hecho = riesgo lumbar</li>
+</ul>
+
+<p class="text-white font-bold">
+No suma. Resta.
+</p>
+
+<h2 class="text-2xl text-white font-black uppercase border-t pt-6">
+Aplicación real
+</h2>
+
+<ol class="list-decimal ml-5 text-white">
+<li>Prioriza control</li>
+<li>Baja peso si pierdes técnica</li>
+<li>Busca feedback</li>
+<li>Entrena rango completo</li>
+</ol>
+
+<p class="text-center text-earth font-bold text-xl">
+Si tu técnica se rompe, esa repetición no cuenta.
+</p>
+
+<h2 class="text-2xl text-white font-black uppercase border-t pt-6">
+Conclusión
+</h2>
+
+<p>
+Puedes levantar más… o puedes entrenar mejor.
+</p>
+
+<p class="text-white font-bold text-lg">
+El progreso real viene del control, no del ego.
+</p>
+
+</div>
+
+<!-- CTA -->
+<div class="text-center border border-white/5 p-10 space-y-6">
+<h3 class="text-xl font-black">Entrena con técnica real</h3>
+
+<p class="text-zinc-500 text-sm">
+Si no estás progresando, probablemente no es falta de esfuerzo.
+Es falta de control.
+</p>
+
+<a href="https://wa.me/56978354063?text=Quiero%20mejorar%20mi%20tecnica"
+target="_blank"
+class="bg-[#25D366] px-10 py-5 text-white font-black uppercase">
+Asesoría por WhatsApp
+</a>
+</div>
+
+</article>
+</main>
+
+<!-- FOOTER -->
+<footer class="py-16 text-center border-t border-white/5">
+<p class="text-sm uppercase">
+<a href="https://www.instagram.com/nicolobosss/" class="font-black">@nicolobosss</a>
+</p>
+<p class="text-xs text-zinc-500 mt-2">
+2026 Nicolás Lobos · Santiago
+</p>
+</footer>
+
+<script>lucide.createIcons();</script>
+
 </body>
 </html>
