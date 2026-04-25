@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodología | Nicolas Lobos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Montserrat', sans-serif; background-color: #080808; color: #e5e5e5; }
+        .text-earth { color: #8C7851; }
+        .bg-earth { background-color: #8C7851; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-blur: 10px; border: 1px solid rgba(255, 255, 255, 0.05); }
+        video { width: 100%; height: 100%; object-fit: cover; border-radius: 8px; filter: grayscale(100%); transition: 0.5s; }
+        .video-card:hover video { filter: grayscale(0%); }
+    </style>
+</head>
+<body>
+
+    <header class="fixed top-0 w-full z-[100] bg-black/95 border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-black tracking-tighter uppercase italic">
+                NICOLAS<span class="text-earth">LOBOS</span>
+            </a>
+            <a href="index.html" class="text-[9px] font-black uppercase tracking-widest text-earth flex items-center gap-2 italic hover:text-white transition-colors">
+                <i data-lucide="arrow-left" class="w-4 h-4"></i> Volver al Inicio
+            </a>
+        </div>
+    </header>
+
+    <main class="pt-40 pb-24 px-6">
+        <div class="max-w-5xl mx-auto space-y-32">
+            
+            <section class="grid lg:grid-cols-2 gap-20 items-center">
+                <div class="space-y-8">
+                    <img src="Nicolas_11.png" alt="Logo PUC" class="w-32 grayscale hover:grayscale-0 transition-all duration-500">
+                    <h1 class="text-5xl font-black uppercase italic tracking-tighter">Entrenamiento con <br> <span class="text-earth">Base Médica.</span></h1>
+                    <p class="text-zinc-400 text-lg leading-relaxed font-light">Ciencia aplicada para resultados definitivos. Especialización en Medicina Deportiva y Actividad Física (PUC).</p>
+                </div>
+                <img src="10_Nicolas.png" alt="Diploma Nicolas Lobos" class="w-full rounded-sm shadow-2xl border border-white/10 hover:scale-[1.02] transition-transform duration-500">
+            </section>
+
+            <section class="space-y-16">
+                <h2 class="text-3xl font-black uppercase italic tracking-tighter border-l-4 border-earth pl-6">Clínica Técnica</h2>
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="aspect-video bg-zinc-900 rounded-sm overflow-hidden video-card shadow-2xl border border-white/5">
+                        <video poster="image_e273b5.jpg" controls preload="metadata">
+                            <source src="Video_1.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="space-y-6">
+                        <h3 class="text-2xl font-black uppercase italic text-earth">Entrenamiento Funcional Real</h3>
+                        <p class="text-zinc-500 text-sm leading-relaxed italic">Principios fundamentales de salud y rendimiento:</p>
+                        <ul class="space-y-4 text-zinc-400 text-[10px] font-black uppercase tracking-widest">
+                            <li class="flex gap-4"><i data-lucide="check" class="text-earth w-4 h-4"></i> Trabajo multiplanar.</li>
+                            <li class="flex gap-4"><i data-lucide="check" class="text-earth w-4 h-4"></i> Musculatura estabilizadora.</li>
+                            <li class="flex gap-4"><i data-lucide="check" class="text-earth w-4 h-4"></i> Prevención de lesiones.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-8 order-2 lg:order-1">
+                    <h3 class="text-2xl font-black uppercase italic">Disciplina sobre Ganas</h3>
+                    <div class="glass p-8 border-l-4 border-earth italic text-zinc-300">
+                        "La mayoría espera ganas. Algunos simplemente cumplen."
+                    </div>
+                    <p class="text-zinc-500 text-sm italic font-light">Construcción diaria sin atajos. El entrenamiento de fuerza es innegociable.</p>
+                </div>
+                <div class="aspect-video bg-zinc-900 rounded-sm overflow-hidden video-card order-1 lg:order-2 shadow-2xl border border-white/5">
+                    <video poster="image_e26c90.png" controls preload="metadata">
+                        <source src="Video_4.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="py-12 bg-black px-6 text-center border-t border-white/5 mt-24">
+        <p class="text-[9px] text-zinc-800 uppercase tracking-[0.8em]">© 2026 Nicolas Lobos.</p>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>
