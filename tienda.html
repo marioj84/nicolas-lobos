@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda | Nicolas Lobos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Montserrat', sans-serif; background-color: #080808; color: #e5e5e5; }
+        .text-earth { color: #8C7851; }
+        .bg-earth { background-color: #8C7851; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-blur: 10px; border: 1px solid rgba(255, 255, 255, 0.05); }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <header class="fixed top-0 w-full z-[100] bg-black/95 border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-black tracking-tighter uppercase italic">
+                NICOLAS<span class="text-earth">LOBOS</span>
+            </a>
+            <a href="index.html" class="text-[9px] font-black uppercase tracking-widest text-earth flex items-center gap-2 italic hover:text-white transition-colors">
+                <i data-lucide="arrow-left" class="w-4 h-4"></i> Volver al Inicio
+            </a>
+        </div>
+    </header>
+
+    <main class="pt-40 pb-24 px-6">
+        <div class="max-w-6xl mx-auto">
+            
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div class="relative group">
+                    <div class="absolute -inset-10 bg-earth/5 blur-[100px] group-hover:bg-earth/10 transition-all"></div>
+                    <img src="Nicolas_12.jpg" alt="Creatina Nicolas Lobos" class="relative z-10 w-full rounded-sm grayscale group-hover:grayscale-0 transition-all duration-1000 shadow-2xl">
+                </div>
+                <div class="space-y-10 text-center lg:text-left">
+                    <div class="text-earth text-[10px] font-black uppercase tracking-[0.6em] italic">Suplementación Élite</div>
+                    <h1 class="text-6xl font-black uppercase italic tracking-tighter">CREATINA <br> <span class="text-earth">PUREZA.</span></h1>
+                    <p class="text-zinc-500 text-lg leading-relaxed italic font-light">300g / Monohidratada. Grado farmacéutico para potenciar tu fuerza y recuperación. Sin sabor ni rellenos.</p>
+                    
+                    <div class="text-5xl font-black tracking-tighter text-white italic">$24.990 <span class="text-xs text-zinc-800 font-normal tracking-widest ml-4 uppercase">CLP</span></div>
+                    
+                    <a href="https://wa.me/56978354063?text=Hola%20Nicolas,%20quiero%20la%20creatina%20con%20respaldo%20científico." target="_blank" class="block bg-earth text-white py-6 rounded-sm font-black uppercase text-[12px] tracking-[0.4em] text-center hover:brightness-110 transition-all shadow-xl italic">
+                        COMPRAR POR WHATSAPP
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="py-12 bg-black px-6 text-center border-t border-white/5 mt-24">
+        <p class="text-[9px] text-zinc-800 uppercase tracking-[0.8em]">© 2026 Nicolas Lobos.</p>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>
