@@ -3,166 +3,220 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Código del Cardio Óptimo | Nicolas Lobos</title>
+    <title>El Código del Cardio Óptimo | Nicolás Lobos</title>
+
+    <link rel="icon" type="image/png" href="favicon.png">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
+
     <style>
         body { font-family: 'Montserrat', sans-serif; background-color: #080808; color: #e5e5e5; }
         .text-earth { color: #8C7851; }
-        .bg-earth { background-color: #8C7851; }
-        .glass { background: rgba(255, 255, 255, 0.03); backdrop-blur: 10px; border: 1px solid rgba(255, 255, 255, 0.05); }
-        .btn-premium { background-color: #8C7851; transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1); }
+        .glass { background: rgba(255,255,255,0.03); backdrop-blur:10px; border:1px solid rgba(255,255,255,0.06);}
+        .btn-premium { background-color:#8C7851; }
     </style>
 </head>
+
 <body class="overflow-x-hidden">
 
-    <!-- Navbar Estático con Logos PNG -->
-    <header class="fixed top-0 w-full z-[100] bg-black border-b border-white/5 h-20 flex items-center">
-        <div class="max-w-7xl mx-auto px-6 w-full flex justify-between items-center">
-            <a href="index.html" class="text-xl md:text-2xl font-black tracking-tighter uppercase text-white">
-                NICOLAS<span class="text-earth">LOBOS</span>
+<!-- HEADER -->
+<header class="fixed top-0 w-full z-[100] bg-black border-b border-white/5 h-20 flex items-center">
+    <div class="max-w-7xl mx-auto px-6 w-full flex justify-between items-center">
+        
+        <a href="index.html" class="text-xl md:text-2xl font-black uppercase text-white">
+            NICOLÁS<span class="text-earth">LOBOS</span>
+        </a>
+
+        <nav class="hidden lg:flex space-x-8 text-[10px] font-black uppercase tracking-[0.2em] text-zinc-400">
+            <a href="index.html">INICIO</a>
+            <a href="metodo.html">METODOLOGÍA</a>
+            <a href="comunidad.html">COMUNIDAD</a>
+            <a href="noticias.html" class="text-white border-b border-earth pb-1">NOTICIAS</a>
+            <a href="descargas.html">DESCARGAS</a>
+            <a href="tienda.html">TIENDA</a>
+            <a href="privada.html" class="text-earth border border-earth/30 px-3 py-1">ÁREA PRIVADA</a>
+        </nav>
+
+        <div class="flex gap-4">
+            <a href="https://www.instagram.com/nicolobosss/" target="_blank" rel="noopener noreferrer">
+                <img src="logo_instagram.png" class="w-10 h-10">
             </a>
-            
-            <nav class="hidden lg:flex space-x-8 text-[10px] font-black uppercase tracking-[0.2em] items-center text-zinc-400">
-                <a href="index.html" class="hover:text-earth transition-colors">INICIO</a>
-                <a href="metodo.html" class="hover:text-earth transition-colors">METODOLOGIA</a>
-                <a href="comunidad.html" class="hover:text-earth transition-colors">COMUNIDAD</a>
-                <a href="noticias.html" class="text-white hover:text-earth transition-colors">NOTICIAS</a>
-                <a href="descargas.html" class="hover:text-earth transition-colors">DESCARGAS</a>
-                <a href="tienda.html" class="hover:text-earth transition-colors">TIENDA</a>
-                <a href="privada.html" class="text-earth border border-earth/30 px-3 py-1 rounded-sm hover:bg-earth/10 transition-all">AREA PRIVADA</a>
-            </nav>
-
-            <div class="flex items-center gap-4">
-                <a href="https://www.instagram.com/nicolobosss" target="_blank" class="hover:scale-110 transition-transform opacity-80 hover:opacity-100">
-                    <img src="logo_instagram.png" alt="Instagram" class="w-5 h-5 object-contain">
-                </a>
-                <a href="https://www.tiktok.com/@nicolaslobos" target="_blank" class="hover:scale-110 transition-transform opacity-80 hover:opacity-100">
-                    <img src="logo_tiktok.png" alt="TikTok" class="w-5 h-5 object-contain">
-                </a>
-                <a href="https://wa.me/56978354063?text=Vi%20tu%20pagina%20WEB%20me%20intersa%20tu%20asesoria" target="_blank" class="hover:scale-110 transition-transform opacity-80 hover:opacity-100 ml-1">
-                    <img src="logo_wsp.png" alt="WhatsApp" class="w-5 h-5 object-contain">
-                </a>
-            </div>
+            <a href="https://www.tiktok.com/@nicolaslobos" target="_blank" rel="noopener noreferrer">
+                <img src="logo_tiktok.png" class="w-10 h-10">
+            </a>
+            <a href="https://wa.me/56978354063?text=Vi%20tu%20p%C3%A1gina%20WEB%20y%20me%20interesa%20tu%20asesor%C3%ADa" target="_blank" rel="noopener noreferrer">
+                <img src="logo_wsp.png" class="w-10 h-10">
+            </a>
         </div>
-    </header>
+    </div>
+</header>
 
-    <main class="pt-32 pb-24 px-6">
-        <article class="max-w-4xl mx-auto space-y-12">
-            
-            <!-- Cabecera del Artículo -->
-            <div class="space-y-6 text-center">
-                <a href="noticias.html" class="inline-flex items-center gap-2 text-earth text-[10px] font-black uppercase tracking-widest hover:text-white transition-colors mb-4">
-                    <i data-lucide="arrow-left" class="w-4 h-4"></i> Volver a Noticias
-                </a>
-                <h1 class="text-4xl md:text-6xl font-black uppercase italic tracking-tighter leading-tight">
-                    El Código del Cardio Óptimo: <br><span class="text-earth">Quemar Grasa sin Sacrificar Músculo</span>
-                </h1>
-                <div class="flex items-center justify-center gap-4 text-zinc-500 text-xs font-bold uppercase tracking-widest">
-                    <span>Por Nicolas Lobos</span>
-                    <span>|</span>
-                    <span>Rendimiento Físico</span>
-                </div>
-            </div>
+<!-- CONTENIDO -->
+<main class="pt-32 pb-24 px-6">
+<article class="max-w-4xl mx-auto space-y-12">
 
-            <!-- Imagen Vertical Adaptada (Sin cortes) -->
-            <div class="w-full max-w-2xl mx-auto overflow-hidden rounded-sm border border-white/10 shadow-2xl">
-                <img src="02_Nicolas.png" alt="Nicolas Lobos Cardio" class="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700">
-            </div>
+<!-- HERO -->
+<div class="text-center space-y-6">
+    <a href="noticias.html" class="text-earth text-[10px] uppercase tracking-widest">
+        ← Volver a noticias
+    </a>
 
-            <!-- Contenido del Artículo -->
-            <div class="prose prose-invert prose-lg max-w-none text-zinc-400 font-light leading-relaxed space-y-8">
-                
-                <p class="text-xl text-white font-medium italic border-l-4 border-earth pl-6">
-                    Durante años, el cardio se ha entendido mal. O se hace demasiado intenso, comprometiendo la masa muscular, o demasiado suave, sin generar un impacto real en la composición corporal.
-                </p>
+    <h1 class="text-4xl md:text-6xl font-black uppercase italic">
+        El código del cardio óptimo<br>
+        <span class="text-earth">Quemar grasa sin sacrificar músculo</span>
+    </h1>
 
-                <p>
-                    El problema no es el cardio. El problema es cómo se estructura. El principio clave: intensidad inteligente, no máxima.
-                </p>
+    <div class="text-zinc-500 text-xs uppercase tracking-widest">
+        Nicolás Lobos · Rendimiento físico
+    </div>
+</div>
 
-                <h2 class="text-2xl font-black text-white uppercase italic tracking-tight pt-8 border-t border-white/10">¿Por qué la caminadora inclinada funciona?</h2>
-                <p>
-                    Para maximizar la oxidación de grasas, no necesitas destruirte. Necesitas mantenerte en un rango donde el cuerpo utilice grasa como fuente de energía. Trabajar con inclinación moderada-alta permite:
-                </p>
-                <ul class="space-y-3 list-none pl-0">
-                    <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-earth shrink-0 mt-1"></i> Aumentar el gasto energético sin necesidad de correr.</li>
-                    <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-earth shrink-0 mt-1"></i> Reducir el impacto articular significativamente.</li>
-                    <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-earth shrink-0 mt-1"></i> Mantener la frecuencia cardíaca en un rango eficiente (Zona 2).</li>
-                    <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-earth shrink-0 mt-1"></i> Permitir sesiones más largas sin fatiga extrema.</li>
-                </ul>
-                <div class="bg-earth/5 border border-earth/20 p-6 rounded-sm">
-                    <p class="font-bold text-white m-0 italic text-center">Inclinación 13 y velocidad 4 es un punto de partida, no una fórmula universal.</p>
-                </div>
+<!-- IMAGEN -->
+<div class="max-w-2xl mx-auto border border-white/10">
+    <img src="02_Nicolas.png" class="grayscale hover:grayscale-0 transition">
+</div>
 
-                <h2 class="text-2xl font-black text-white uppercase italic tracking-tight pt-8 border-t border-white/10">Lo que dice la evidencia reciente</h2>
-                
-                <div class="glass p-6 rounded-sm space-y-6">
-                    <div class="space-y-2">
-                        <p class="text-sm">Investigadores de la <b>University of Copenhagen (2024)</b> encontraron que el ejercicio en intensidades moderadas optimiza la oxidación de grasas frente a intensidades altas.</p>
-                        <a href="https://nexs.ku.dk/research/metabolic-flexibility-2024" target="_blank" class="text-earth text-xs uppercase tracking-widest font-bold hover:text-white flex items-center gap-1"><i data-lucide="link" class="w-3 h-3"></i> nexs.ku.dk</a>
-                    </div>
-                    <div class="space-y-2">
-                        <p class="text-sm">Un estudio del <b>Journal of Applied Physiology (2025)</b> confirmó que el cardio en zona aeróbica mejora la eficiencia metabólica sin afectar negativamente la masa muscular.</p>
-                        <a href="https://journals.physiology.org" target="_blank" class="text-earth text-xs uppercase tracking-widest font-bold hover:text-white flex items-center gap-1"><i data-lucide="link" class="w-3 h-3"></i> journals.physiology.org</a>
-                    </div>
-                    <div class="space-y-2">
-                        <p class="text-sm">Evidencia de la <b>Stanford University (2023)</b> mostró que protocolos de caminata inclinada generan un gasto calórico comparable al trote con menor fatiga neuromuscular.</p>
-                        <a href="https://med.stanford.edu/exercise-research-2023" target="_blank" class="text-earth text-xs uppercase tracking-widest font-bold hover:text-white flex items-center gap-1"><i data-lucide="link" class="w-3 h-3"></i> med.stanford.edu</a>
-                    </div>
-                </div>
+<!-- TEXTO -->
+<div class="space-y-8 text-zinc-400 leading-relaxed">
 
-                <h2 class="text-2xl font-black text-white uppercase italic tracking-tight pt-8 border-t border-white/10">El error más común</h2>
-                <p>Creer que más intensidad siempre significa más grasa quemada. En realidad:</p>
-                <ul class="space-y-3 list-none pl-0">
-                    <li class="flex items-start gap-3"><i data-lucide="x" class="w-5 h-5 text-red-500 shrink-0 mt-1"></i> A mayor intensidad hay un mayor uso de glucógeno (carbohidratos).</li>
-                    <li class="flex items-start gap-3"><i data-lucide="x" class="w-5 h-5 text-red-500 shrink-0 mt-1"></i> El exceso de fatiga compromete la recuperación muscular.</li>
-                    <li class="flex items-start gap-3"><i data-lucide="x" class="w-5 h-5 text-red-500 shrink-0 mt-1"></i> Aumenta el riesgo de procesos catabólicos.</li>
-                </ul>
+<p class="text-xl text-white italic border-l-4 border-earth pl-6">
+Si llevas meses haciendo cardio y no ves cambios reales en tu físico… no eres tú. Es cómo lo estás haciendo.
+</p>
 
-                <h2 class="text-2xl font-black text-white uppercase italic tracking-tight pt-8 border-t border-white/10">¿Cómo aplicarlo correctamente?</h2>
-                <div class="bg-earth/5 border border-earth/20 p-8 rounded-sm space-y-4">
-                    <ol class="list-decimal list-inside space-y-3 text-white font-medium">
-                        <li>Busca una inclinación desafiante pero que sea sostenible.</li>
-                        <li>Ajusta la velocidad para poder mantener una conversación corta.</li>
-                        <li>Duración recomendada: 20 a 40 minutos.</li>
-                        <li>Frecuencia: 3 a 5 veces por semana según tu objetivo.</li>
-                        <li>Combínalo <b>SIEMPRE</b> con un entrenamiento de fuerza serio.</li>
-                    </ol>
-                </div>
-                
-                <div class="text-center pt-8 space-y-4">
-                    <p class="text-xl font-black text-white italic">Si terminas destruido, te pasaste.</p>
-                    <p class="text-xl font-black text-white italic">Si no sudas nada, te quedaste corto.</p>
-                </div>
+<p>
+Muchos entrenan duro, sudan, terminan agotados… pero siguen igual. ¿Por qué? Porque confunden intensidad con eficiencia.
+</p>
 
-                <h2 class="text-2xl font-black text-white uppercase italic tracking-tight pt-8 border-t border-white/10">Conclusión</h2>
-                <p>
-                    El cardio óptimo no es una fórmula fija. Es un equilibrio. La caminadora inclinada es una herramienta poderosa, pero el verdadero resultado viene de cómo ajustas la intensidad a tu cuerpo.
-                </p>
-                <p class="font-bold text-white text-lg">
-                    Porque quemar grasa no se trata de hacer más, se trata de hacerlo mejor.
-                </p>
+<p class="text-white font-bold">
+El problema no es el cardio. Es cómo lo estructuras.
+</p>
 
-            </div>
+<h2 class="text-2xl text-white font-black uppercase italic border-t pt-6">
+Por qué la caminadora inclinada funciona
+</h2>
 
-            <!-- Call to Action -->
-            <div class="mt-16 bg-zinc-950 p-10 border border-white/5 rounded-sm text-center space-y-6">
-                <h3 class="text-2xl font-black uppercase italic text-white">Optimiza tu composición corporal</h3>
-                <p class="text-zinc-500 text-sm">No desgastes tu músculo con cardio mal planificado. Agenda tu diagnóstico y diseñemos tu estrategia ideal.</p>
-                <a href="https://wa.me/56978354063?text=Vi%20tu%20pagina%20WEB%20me%20intersa%20tu%20asesoria" target="_blank" class="btn-premium text-white px-10 py-5 rounded-sm font-black uppercase text-[10px] tracking-widest hover:brightness-110 transition-all shadow-xl inline-flex items-center gap-3">
-                    ASESORÍA POR WHATSAPP <i data-lucide="message-circle" class="w-4 h-4"></i>
-                </a>
-            </div>
+<ul class="space-y-2">
+<li>✔ Mayor gasto energético sin impacto alto</li>
+<li>✔ Mantiene quema de grasa (zona 2)</li>
+<li>✔ Permite sesiones sostenibles</li>
+<li>✔ Menor fatiga neuromuscular</li>
+</ul>
 
-        </article>
-    </main>
+<div class="glass p-6 text-center text-white italic">
+“Inclinación 13 y velocidad 4 es una referencia, no una regla.”
+</div>
 
-    <footer class="py-12 bg-black px-6 text-center border-t border-white/5">
-        <p class="text-[9px] text-zinc-800 uppercase tracking-[0.8em]">2026 Nicolas Lobos. Santiago, Chile.</p>
-    </footer>
+<!-- EVIDENCIA -->
+<h2 class="text-2xl text-white font-black uppercase italic border-t pt-6">
+Evidencia científica
+</h2>
 
-    <script>lucide.createIcons();</script>
+<div class="glass p-6 space-y-6">
+
+<div>
+<p>
+University of Copenhagen (2024): intensidades moderadas optimizan la oxidación de grasa.
+</p>
+<a href="https://nexs.ku.dk/research/metabolic-flexibility-2024" target="_blank" rel="noopener noreferrer" class="text-earth text-xs">Ver estudio</a>
+</div>
+
+<div>
+<p>
+Journal of Applied Physiology (2025): cardio aeróbico mejora metabolismo sin perder músculo.
+</p>
+<a href="https://journals.physiology.org" target="_blank" rel="noopener noreferrer" class="text-earth text-xs">Ver estudio</a>
+</div>
+
+<div>
+<p>
+Stanford (2023): caminata inclinada ≈ gasto calórico de trote con menor fatiga.
+</p>
+<a href="https://med.stanford.edu/exercise-research-2023" target="_blank" rel="noopener noreferrer" class="text-earth text-xs">Ver estudio</a>
+</div>
+
+</div>
+
+<h2 class="text-2xl text-white font-black uppercase italic border-t pt-6">
+Error común
+</h2>
+
+<ul class="space-y-2">
+<li>✖ Hacer cardio al máximo siempre</li>
+<li>✖ Quemar glucógeno en vez de grasa</li>
+<li>✖ Fatiga excesiva</li>
+<li>✖ Estancamiento</li>
+</ul>
+
+<p class="text-white font-bold">
+Si terminas destruido todos los días, probablemente lo estás haciendo mal.
+</p>
+
+<h2 class="text-2xl text-white font-black uppercase italic border-t pt-6">
+Aplicación práctica
+</h2>
+
+<ol class="list-decimal ml-5 text-white">
+<li>Intensidad moderada (puedes hablar)</li>
+<li>20–40 minutos</li>
+<li>3–5 veces por semana</li>
+<li>Siempre combinado con fuerza</li>
+</ol>
+
+<p class="text-center text-earth font-bold text-xl">
+No necesitas más cardio. Necesitas mejor cardio.
+</p>
+
+<h2 class="text-2xl text-white font-black uppercase italic border-t pt-6">
+Conclusión
+</h2>
+
+<p>
+El cardio bien aplicado no destruye músculo, lo protege.  
+No se trata de sufrir más, sino de entender cómo funciona tu cuerpo.
+</p>
+
+<p class="text-white font-bold text-lg">
+Porque el progreso real no es hacer más… es hacerlo mejor.
+</p>
+
+</div>
+
+<!-- CTA -->
+<div class="text-center border border-white/5 p-10 space-y-6">
+    <h3 class="text-xl font-black">Optimiza tu físico</h3>
+    <p class="text-zinc-500 text-sm">
+        Si estás estancado, probablemente no es falta de esfuerzo… es falta de estrategia.
+    </p>
+
+    <a href="https://wa.me/56978354063?text=Vi%20tu%20p%C3%A1gina%20WEB%20y%20me%20interesa%20tu%20asesor%C3%ADa"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="bg-[#25D366] px-10 py-5 inline-block text-white font-black uppercase">
+       Asesoría por WhatsApp
+    </a>
+</div>
+
+</article>
+</main>
+
+<!-- FOOTER -->
+<footer class="py-16 text-center border-t border-white/5">
+<p class="text-[12px] uppercase">
+<a href="https://www.instagram.com/nicolobosss/" class="font-black">
+@nicolobosss
+</a>
+</p>
+
+<p class="text-[10px] text-zinc-500 mt-2">
+2026 Nicolás Lobos · Santiago
+</p>
+</footer>
+
+<script>
+lucide.createIcons();
+</script>
+
 </body>
 </html>
