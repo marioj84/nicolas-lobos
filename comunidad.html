@@ -11,7 +11,6 @@
         body { font-family: 'Montserrat', sans-serif; background-color: #080808; color: #e5e5e5; }
         .text-earth { color: #8C7851; }
         .bg-earth { background-color: #8C7851; }
-        .btn-premium { background-color: #8C7851; transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1); }
         .glass { background: rgba(255, 255, 255, 0.03); backdrop-blur: 10px; border: 1px solid rgba(255, 255, 255, 0.05); }
         video { width: 100%; height: 100%; object-fit: cover; border-radius: 8px; filter: grayscale(100%); transition: 0.5s; }
         .video-card:hover video { filter: grayscale(0%); }
@@ -21,21 +20,23 @@
 
     <header class="fixed top-0 w-full z-[100] bg-black border-b border-white/5 h-20 flex items-center">
         <div class="max-w-7xl mx-auto px-6 w-full flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-black tracking-tighter uppercase text-white">
+            <a href="index.html" class="text-xl md:text-2xl font-black tracking-tighter uppercase text-white">
                 NICOLAS<span class="text-earth">LOBOS</span>
             </a>
-            <nav class="hidden lg:flex space-x-10 text-[10px] font-black uppercase tracking-[0.2em] items-center text-zinc-400">
+            <nav class="hidden lg:flex space-x-8 text-[10px] font-black uppercase tracking-[0.2em] items-center text-zinc-400">
                 <a href="index.html" class="hover:text-earth transition-colors">INICIO</a>
-                <a href="metodo.html" class="hover:text-earth transition-colors">METODOLOGÍA</a>
+                <a href="metodo.html" class="hover:text-earth transition-colors">METODOLOGIA</a>
                 <a href="comunidad.html" class="text-white hover:text-earth transition-colors">COMUNIDAD</a>
+                <a href="noticias.html" class="hover:text-earth transition-colors">NOTICIAS</a>
                 <a href="tienda.html" class="hover:text-earth transition-colors">TIENDA</a>
-                <a href="index.html#contacto" class="btn-premium text-white px-8 py-3 rounded-full font-black shadow-lg">DIAGNÓSTICO GRATIS</a>
+                <a href="privada.html" class="text-earth border border-earth/30 px-3 py-1 rounded-sm hover:bg-earth/10 transition-all">AREA PRIVADA</a>
             </nav>
-            <div class="flex items-center gap-4">
+            <div class="flex items-center gap-3">
                 <a href="https://www.instagram.com/nicolobosss" target="_blank" class="text-earth hover:scale-110 transition-transform"><i data-lucide="instagram" class="w-5 h-5"></i></a>
                 <a href="https://www.tiktok.com/@nicolaslobos" target="_blank" class="text-earth hover:scale-110 transition-transform">
                     <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
                 </a>
+                <a href="https://wa.me/56978354063?text=Vi%20tu%20pagina%20WEB%20me%20intersa%20tu%20asesoria" target="_blank" class="text-[#25D366] hover:scale-110 transition-transform ml-2"><i data-lucide="message-circle" class="w-5 h-5"></i></a>
             </div>
         </div>
     </header>
@@ -45,12 +46,12 @@
             
             <div class="space-y-6">
                 <h1 class="text-6xl font-black uppercase italic tracking-tighter">Cultura y <span class="text-earth">Disciplina</span></h1>
-                <p class="text-zinc-500 uppercase text-[10px] tracking-[0.5em] font-bold">La energía del equipo en movimiento.</p>
+                <p class="text-zinc-500 uppercase text-[10px] tracking-[0.5em] font-bold">La energia del equipo en movimiento.</p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-16">
                 <div class="space-y-8">
-                    <div class="aspect-[9/16] bg-zinc-900 rounded-sm overflow-hidden video-card shadow-2xl max-w-xs mx-auto border border-white/5">
+                    <div class="aspect-[9/16] bg-zinc-900 rounded-sm overflow-hidden video-card shadow-2xl max-w-sm mx-auto border border-white/5 w-full">
                         <video poster="image_e2704d.png" controls preload="metadata">
                             <source src="Video_2.mp4" type="video/mp4">
                         </video>
@@ -59,7 +60,7 @@
                 </div>
 
                 <div class="space-y-8">
-                    <div class="aspect-[9/16] bg-zinc-900 rounded-sm overflow-hidden video-card shadow-2xl max-w-xs mx-auto border border-white/5">
+                    <div class="aspect-[9/16] bg-zinc-900 rounded-sm overflow-hidden video-card shadow-2xl max-w-sm mx-auto border border-white/5 w-full">
                         <video poster="image_e26fb9.png" controls preload="metadata">
                             <source src="Video_3.mp4" type="video/mp4">
                         </video>
@@ -68,24 +69,14 @@
                 </div>
             </div>
 
-            <section class="py-20 border-t border-white/5">
-                <h2 class="text-3xl font-black uppercase italic tracking-tighter mb-12 text-center">En la Trinchera</h2>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <img src="01_Nicolas.png" alt="Acción Gym" class="w-full h-64 object-cover grayscale hover:grayscale-0 transition-all duration-500 rounded-sm">
-                    <img src="03_Nicolas.png" alt="Acción Gym" class="w-full h-64 object-cover grayscale hover:grayscale-0 transition-all duration-500 rounded-sm">
-                    <img src="06_Nicolas.png" alt="Acción Gym" class="w-full h-64 object-cover grayscale hover:grayscale-0 transition-all duration-500 rounded-sm">
-                    <img src="08_Nicolas.png" alt="Acción Gym" class="w-full h-64 object-cover grayscale hover:grayscale-0 transition-all duration-500 rounded-sm">
-                </div>
-            </section>
-
             <section class="glass p-10 rounded-sm space-y-10 border-earth/20 max-w-3xl mx-auto">
                 <div class="space-y-4">
-                    <h2 class="text-3xl font-black uppercase italic tracking-tighter">Potencia tu Mentalidad <br><span class="text-earth text-2xl">Asistente IA</span></h2>
-                    <p class="text-zinc-500 text-xs uppercase tracking-widest font-bold">Obtén un enfoque mental personalizado antes de entrenar</p>
+                    <h2 class="text-3xl font-black uppercase italic tracking-tighter">Potencia tu Mentalidad <br><span class="text-earth text-2xl">Asistente Inteligente</span></h2>
+                    <p class="text-zinc-500 text-xs uppercase tracking-widest font-bold">Obten un enfoque mental personalizado antes de entrenar</p>
                 </div>
                 
                 <div class="space-y-6">
-                    <input type="text" id="ai-input" placeholder="¿Cuál es tu excusa hoy?" 
+                    <input type="text" id="ai-input" placeholder="¿Cual es tu excusa hoy?" 
                            class="w-full bg-white/5 border border-white/10 p-5 rounded-sm outline-none focus:border-earth transition-all text-white">
                     <button onclick="getMantra()" id="ai-btn" class="bg-earth text-white px-10 py-5 rounded-sm font-black uppercase text-[10px] tracking-[0.4em] hover:brightness-110 transition-all w-full italic">
                         GENERAR ENFOQUE
@@ -98,16 +89,16 @@
     </main>
 
     <footer class="py-12 bg-black px-6 text-center border-t border-white/5 mt-24">
-        <p class="text-[9px] text-zinc-800 uppercase tracking-[0.8em]">© 2026 Nicolas Lobos. Santiago, Chile.</p>
+        <p class="text-[9px] text-zinc-800 uppercase tracking-[0.8em]">2026 Nicolas Lobos. Santiago, Chile.</p>
     </footer>
 
-    <a href="https://wa.me/56978354063" target="_blank" class="fixed bottom-10 right-10 bg-[#25D366] text-white p-5 rounded-full shadow-[0_0_20px_rgba(37,211,102,0.3)] hover:scale-110 transition-all z-[200]">
+    <a href="https://wa.me/56978354063?text=Vi%20tu%20pagina%20WEB%20me%20intersa%20tu%20asesoria" target="_blank" class="fixed bottom-10 right-10 bg-[#25D366] text-white p-5 rounded-full shadow-[0_0_20px_rgba(37,211,102,0.3)] hover:scale-110 transition-all z-[200]">
         <i data-lucide="message-circle" class="w-8 h-8"></i>
     </a>
 
     <script>
         lucide.createIcons();
-        const apiKey = ""; // IMPORTANTE: Aquí deberás colocar tu API Key de Google Gemini
+        const apiKey = "";
         async function getMantra() {
             const input = document.getElementById('ai-input').value;
             const btn = document.getElementById('ai-btn');
@@ -119,11 +110,11 @@
             btn.innerHTML = "Analizando excusa...";
             resultDiv.classList.add('hidden');
 
-            const systemPrompt = "Eres Nicolas Lobos, coach de alto rendimiento. Estilo rudo pero motivador. Frase clave: 'Sin atajos'. Destruye la excusa del usuario en 20 palabras o menos y dale una orden para entrenar. No uses emojis.";
+            const systemPrompt = "Eres Nicolas Lobos, coach de alto rendimiento. Estilo rudo pero motivador. Frase clave: 'Sin atajos'. Destruye la excusa del usuario en 20 palabras o menos y dale una orden para entrenar. No uses emoticones ni iconos.";
             
             try {
                 if(apiKey === "") {
-                    resultDiv.innerHTML = "La función de inteligencia artificial requiere configurar la clave de acceso en el sistema. Mientras tanto: las excusas no queman calorías. Ve a entrenar.";
+                    resultDiv.innerHTML = "Las excusas no queman calorias. Ve a entrenar.";
                     resultDiv.classList.remove('hidden');
                     btn.disabled = false;
                     btn.innerHTML = "GENERAR ENFOQUE";
@@ -142,7 +133,7 @@
                 resultDiv.innerHTML = data.candidates[0].content.parts[0].text;
                 resultDiv.classList.remove('hidden');
             } catch (e) {
-                resultDiv.innerHTML = "Error de conexión. Disciplina sobre motivación. Empieza tu rutina.";
+                resultDiv.innerHTML = "Disciplina sobre motivacion. Empieza tu rutina.";
                 resultDiv.classList.remove('hidden');
             } finally {
                 btn.disabled = false;
