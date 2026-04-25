@@ -1,290 +1,324 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nicolas Lobos | High Performance & Sports Medicine</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-        body { font-family: 'Montserrat', sans-serif; background-color: #080808; color: #e5e5e5; }
-        .scroll-smooth { scroll-behavior: smooth; }
-        .text-earth { color: #8C7851; }
-        .bg-earth { background-color: #8C7851; }
-        .border-earth { border-color: #8C7851; }
-        
-        .btn-premium {
-            background-color: #8C7851;
-            transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
-        }
-        .btn-premium:hover {
-            background-color: #a68d5f;
-            transform: translateY(-4px);
-            box-shadow: 0 20px 40px -15px rgba(140, 120, 81, 0.5);
-        }
+import React, { useState, useEffect } from 'react';
+import { 
+  Instagram, 
+  MessageCircle, 
+  ChevronRight, 
+  Dumbbell, 
+  Apple, 
+  Zap, 
+  CheckCircle2, 
+  Mail, 
+  MapPin, 
+  Phone,
+  Menu,
+  X
+} from 'lucide-react';
 
-        .glass { background: rgba(255, 255, 255, 0.03); backdrop-blur: 10px; border: 1px solid rgba(255, 255, 255, 0.05); }
-        
-        .reveal { opacity: 0; transform: translateY(30px); transition: all 1s ease-out; }
-        .reveal.active { opacity: 1; transform: translateY(0); }
+const App = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('inicio');
 
-        /* Custom Video Styling */
-        video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 8px;
-            filter: grayscale(100%);
-            transition: filter 0.5s ease;
-        }
-        .video-card:hover video {
-            filter: grayscale(0%);
-        }
+  // Configuración de Colores Personalizada
+  const colors = {
+    bg: 'bg-[#121212]',
+    card: 'bg-[#1a1a1a]',
+    accent: 'bg-[#8C7851]',
+    accentText: 'text-[#8C7851]',
+    border: 'border-[#2a2a2a]',
+    textMain: 'text-[#E0E0E0]',
+    textMuted: 'text-[#A0A0A0]'
+  };
 
-        .video-container {
-            position: relative;
-            padding-bottom: 177.78%; /* 9:16 Aspect Ratio (Reels) */
-            height: 0;
-            overflow: hidden;
-            border-radius: 12px;
-            background: #000;
-        }
-        .video-container video {
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-    </style>
-</head>
-<body class="overflow-x-hidden">
+  const scrollTo = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMenuOpen(false);
+    setActiveSection(id);
+  };
 
-    <header class="fixed top-0 w-full z-[100] bg-black/95 backdrop-blur-md border-b border-white/5">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-            <div class="text-xl font-black tracking-tighter uppercase">
-                NICOLAS<span class="text-earth">LOBOS</span>
-            </div>
-            
-            <nav class="hidden lg:flex space-x-10 text-[9px] font-black uppercase tracking-[0.3em] items-center text-zinc-400">
-                <a href="#inicio" class="hover:text-earth transition-colors text-white">Inicio</a>
-                <a href="#respaldo" class="hover:text-earth transition-colors">Respaldo</a>
-                <a href="#clinica" class="hover:text-earth transition-colors text-earth">Vídeos</a>
-                <a href="#tienda" class="hover:text-earth transition-colors">Tienda</a>
-                <a href="#contacto" class="btn-premium text-white px-8 py-3 rounded-full font-black shadow-lg">DIAGNÓSTICO GRATIS</a>
-            </nav>
+  const NavItem = ({ id, label }) => (
+    <button 
+      onClick={() => scrollTo(id)}
+      className={`uppercase text-xs tracking-widest font-semibold transition-colors duration-300 ${
+        activeSection === id ? colors.accentText : 'text-gray-400 hover:text-white'
+      }`}
+    >
+      {label}
+    </button>
+  );
 
-            <a href="https://www.instagram.com/nicolobosss/" target="_blank" class="text-earth hover:scale-110 transition-transform">
-                <i data-lucide="instagram" class="w-6 h-6"></i>
-            </a>
+  return (
+    <div className={`min-h-screen ${colors.bg} ${colors.textMain} font-sans selection:bg-[#8C7851] selection:text-white`}>
+      
+      {/* HEADER */}
+      <header className="fixed top-0 w-full z-50 bg-[#121212]/90 backdrop-blur-md border-b border-[#2a2a2a]">
+        <div className="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+          <div className="text-xl font-bold tracking-tighter">
+            NICOLAS<span className={colors.accentText}>LOBOS</span>
+          </div>
+
+          {/* Desktop Nav */}
+          <nav className="hidden md:flex space-x-8">
+            <NavItem id="inicio" label="Inicio" />
+            <NavItem id="testimonios" label="Resultados" />
+            <NavItem id="tips" label="Tips" />
+            <NavItem id="tienda" label="Tienda" />
+            <NavItem id="contacto" label="Contacto" />
+          </nav>
+
+          {/* Mobile Menu Toggle */}
+          <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            {isMenuOpen ? <X /> : <Menu />}
+          </button>
         </div>
-    </header>
 
-    <section id="inicio" class="relative min-h-screen flex items-center px-6 pt-20 overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <img src="02_Nicolas.png" alt="Nicolas Lobos Training" class="w-full h-full object-cover grayscale opacity-20">
-            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#080808]/80 to-[#080808]"></div>
+        {/* Mobile Nav Overlay */}
+        {isMenuOpen && (
+          <div className="md:hidden absolute top-20 left-0 w-full bg-[#1a1a1a] border-b border-[#2a2a2a] py-6 flex flex-col items-center space-y-6 animate-in slide-in-from-top">
+            <NavItem id="inicio" label="Inicio" />
+            <NavItem id="testimonios" label="Resultados" />
+            <NavItem id="tips" label="Tips" />
+            <NavItem id="tienda" label="Tienda" />
+            <NavItem id="contacto" label="Contacto" />
+          </div>
+        )}
+      </header>
+
+      {/* HERO SECTION */}
+      <section id="inicio" className="pt-32 pb-20 px-6">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+          <div className="order-2 md:order-1">
+            <h2 className={`${colors.accentText} uppercase tracking-[0.3em] text-sm font-bold mb-4`}>Entrenador Personal</h2>
+            <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
+              TRANSFORMA TU <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8C7851] to-[#b59e75]">DISCIPLINA.</span>
+            </h1>
+            <p className={`${colors.textMuted} text-lg mb-8 max-w-md`}>
+              Asesorías personalizadas diseñadas para llevar tu rendimiento físico y mental al siguiente nivel. Basado en ciencia, forjado en el gimnasio.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <button 
+                onClick={() => scrollTo('contacto')}
+                className={`${colors.accent} hover:brightness-110 text-white px-8 py-4 rounded-sm font-bold uppercase text-xs tracking-widest transition-all`}
+              >
+                Empezar Asesoría
+              </button>
+              <button 
+                onClick={() => scrollTo('testimonios')}
+                className="border border-[#2a2a2a] hover:bg-white/5 text-white px-8 py-4 rounded-sm font-bold uppercase text-xs tracking-widest transition-all"
+              >
+                Ver Resultados
+              </button>
+            </div>
+          </div>
+          <div className="order-1 md:order-2 flex justify-center">
+            <div className="relative group">
+              <div className={`absolute -inset-1 ${colors.accent} rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000`}></div>
+              <img 
+                src="https://raw.githubusercontent.com/tu-usuario/tu-repo/main/image_ee497e.png" 
+                alt="Nicolas Lobos" 
+                className="relative w-64 h-64 md:w-96 md:h-96 rounded-full object-cover border-4 border-[#1a1a1a] grayscale hover:grayscale-0 transition-all duration-700"
+                onError={(e) => {
+                  e.target.src = "https://images.unsplash.com/photo-1594381898411-846e7d193883?auto=format&fit=crop&q=80&w=800";
+                }}
+              />
+            </div>
+          </div>
         </div>
-        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center relative z-10 w-full">
-            <div class="space-y-8 text-center lg:text-left reveal">
-                <div class="inline-block px-4 py-1 border border-earth/30 bg-earth/5 text-earth text-[9px] font-black uppercase tracking-[0.5em] rounded-full">Base Científica • Alto Rendimiento</div>
-                <h1 class="text-5xl md:text-8xl font-black leading-none uppercase tracking-tighter italic">¿EMPIEZAS EL LUNES <br><span class="text-earth">Y ABANDONAS EL JUEVES?</span></h1>
-                <p class="text-zinc-400 text-lg md:text-xl max-w-lg font-light leading-relaxed mx-auto lg:mx-0">Deja de esperar "ganas". Mi método está diseñado para que cumplas, incluso cuando no estés motivado. <b>Medicina Deportiva PUC.</b></p>
-                <div class="flex flex-col sm:flex-row gap-6 pt-4 justify-center lg:justify-start">
-                    <a href="#contacto" class="btn-premium text-white px-12 py-6 rounded-sm font-black uppercase text-[11px] tracking-widest text-center shadow-2xl">SOLICITAR DIAGNÓSTICO</a>
-                    <a href="#clinica" class="glass text-white px-10 py-6 rounded-sm font-bold uppercase text-[11px] tracking-widest flex items-center justify-center gap-3 hover:bg-white/5 transition-all">
-                        <i data-lucide="play-circle" class="w-5 h-5 text-earth"></i> Ver Vídeo Clínica
-                    </a>
+      </section>
+
+      {/* RESULTADOS / TESTIMONIOS */}
+      <section id="testimonios" className={`py-24 ${colors.card}`}>
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <h2 className="text-3xl font-bold mb-12 uppercase tracking-tighter">Resultados Reales</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[1, 2, 3].map((item) => (
+              <div key={item} className="bg-[#121212] p-4 rounded-sm border border-[#2a2a2a] group">
+                <div className="aspect-[3/4] mb-6 overflow-hidden bg-zinc-800">
+                  <img 
+                    src={`https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&q=80&w=500&sig=${item}`} 
+                    alt="Resultado" 
+                    className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500"
+                  />
                 </div>
-            </div>
-            <div class="hidden lg:flex justify-end reveal">
-                <div class="relative group">
-                    <div class="absolute -inset-4 bg-earth rounded-full blur opacity-10 group-hover:opacity-30 transition duration-1000"></div>
-                    <img src="foto_perfil.png" 
-                         alt="Nicolas Lobos Quintana" 
-                         onerror="this.src='https://images.unsplash.com/photo-1594381898411-846e7d193883?auto=format&fit=crop&q=80&w=800'"
-                         class="relative w-[450px] h-[450px] md:w-[450px] md:h-[450px] rounded-full object-cover border-8 border-[#121212] grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl">
-                </div>
-            </div>
+                <h3 className={`${colors.accentText} font-bold mb-2`}>Cambio en 12 Semanas</h3>
+                <p className={`${colors.textMuted} text-sm italic`}>"La disciplina de Nicolas me ayudó a superar mis límites. No solo cambié mi cuerpo, sino mi mentalidad diaria."</p>
+              </div>
+            ))}
+          </div>
         </div>
-    </section>
+      </section>
 
-    <section id="clinica" class="py-32 px-6 border-y border-white/5 bg-[#0a0a0a]">
-        <div class="max-w-7xl mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-24 gap-8 reveal">
-                <div class="max-w-2xl text-left">
-                    <h2 class="text-5xl font-black uppercase tracking-tighter italic mb-4">VIDEO CLÍNICA DE <br><span class="text-earth">RENDIMIENTO</span></h2>
-                    <p class="text-zinc-500 uppercase text-[10px] tracking-[0.4em] font-bold">La ciencia detrás de cada repetición.</p>
-                </div>
+      {/* TIPS / MINI BLOG */}
+      <section id="tips" className="py-24 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+            <div className="max-w-xl text-left">
+              <h2 className="text-3xl font-bold mb-4 uppercase tracking-tighter">Consejos de Nicolas</h2>
+              <p className={colors.textMuted}>Educación sobre entrenamiento y nutrición para que entiendas el porqué de cada repetición.</p>
             </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 reveal">
-                
-                <div class="video-card group space-y-6">
-                    <div class="video-container shadow-2xl">
-                        <video poster="image_e273b5.jpg" controls preload="metadata">
-                            <source src="Video_1.mp4" type="video/mp4">
-                            Tu navegador no soporta videos.
-                        </video>
-                    </div>
-                    <div class="px-2">
-                        <h4 class="font-black text-[10px] uppercase tracking-widest text-earth mb-2 italic">01. EL MÉTODO FUNCIONAL</h4>
-                        <p class="text-zinc-500 text-[10px] leading-relaxed font-light">Ciencia aplicada al movimiento real. Trabajo multiplanar y longevidad.</p>
-                    </div>
-                </div>
-
-                <div class="video-card group space-y-6">
-                    <div class="video-container shadow-2xl">
-                        <video poster="image_e26c90.png" controls preload="metadata">
-                            <source src="Video_4.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="px-2 border-l border-earth/30 pl-4">
-                        <h4 class="font-black text-[10px] uppercase tracking-widest text-white mb-2 italic">02. DISCIPLINA > GANAS</h4>
-                        <p class="text-zinc-400 text-[10px] leading-relaxed font-bold">"La mayoría espera ganas. Algunos simplemente cumplen."</p>
-                    </div>
-                </div>
-
-                <div class="video-card group space-y-6">
-                    <div class="video-container shadow-2xl">
-                        <video poster="image_e2704d.png" controls preload="metadata">
-                            <source src="Video_2.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="px-2">
-                        <h4 class="font-black text-[10px] uppercase tracking-widest text-earth mb-2 italic">03. RESULTADOS EN EQUIPO</h4>
-                        <p class="text-zinc-500 text-[10px] leading-relaxed font-light">Energía grupal y seguimiento constante en cada sesión del Team.</p>
-                    </div>
-                </div>
-
-                <div class="video-card group space-y-6">
-                    <div class="video-container shadow-2xl">
-                        <video poster="image_e26fb9.png" controls preload="metadata">
-                            <source src="Video_3.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="px-2">
-                        <h4 class="font-black text-[10px] uppercase tracking-widest text-earth mb-2 italic">04. GIRL POWER FLOW</h4>
-                        <p class="text-zinc-500 text-[10px] leading-relaxed font-light">Fuerza y motivación femenina. Resultados específicos para nuestras alumnas.</p>
-                    </div>
-                </div>
-
-            </div>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <BlogCard 
+              icon={<Zap className="w-6 h-6" />}
+              title="Creatina: ¿Por qué es el #1?"
+              text="Es el suplemento con más evidencia científica. Ayuda a regenerar ATP rápidamente, permitiéndote mover más peso y recuperarte mejor entre series."
+              colors={colors}
+            />
+            <BlogCard 
+              icon={<Dumbbell className="w-6 h-6" />}
+              title="Sobrecarga Progresiva"
+              text="Si no anotas tus pesos, no estás entrenando. El secreto del crecimiento es ganarle a tu 'yo' de la semana pasada, ya sea por una repetición extra o un kilo más."
+              colors={colors}
+            />
+            <BlogCard 
+              icon={<Apple className="w-6 h-6" />}
+              title="Proteína y Recuperación"
+              text="Tus músculos se reparan durante el descanso. Asegurar 1.8g a 2.2g de proteína por kilo es vital para la hipertrofia y la salud metabólica."
+              colors={colors}
+            />
+          </div>
         </div>
-    </section>
+      </section>
 
-    <section id="respaldo" class="py-40 px-6 bg-[#0c0c0c]">
-        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
-            <div class="relative group reveal">
-                <div class="absolute -inset-10 bg-earth/5 blur-[100px]"></div>
-                <img src="10_Nicolas.png" alt="Diploma Medicina Deportiva PUC" class="relative z-10 w-full rounded-sm shadow-2xl border border-white/10 group-hover:scale-[1.01] transition-transform duration-700">
+      {/* TIENDA / PRODUCTOS */}
+      <section id="tienda" className={`py-24 ${colors.card}`}>
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="bg-[#121212] border border-[#2a2a2a] p-8 md:p-12 flex flex-col md:flex-row gap-12 items-center rounded-sm">
+            <div className="w-full md:w-1/3">
+              <img 
+                src="https://images.unsplash.com/photo-1593095191850-2a7330098fab?auto=format&fit=crop&q=80&w=500" 
+                alt="Creatina" 
+                className="w-full rounded-sm shadow-2xl grayscale"
+              />
             </div>
-            <div class="space-y-8 reveal">
-                <h2 class="text-4xl md:text-6xl font-black uppercase tracking-tighter italic leading-none text-white">AUTORIDAD <br> <span class="text-earth text-3xl md:text-5xl">CIENTÍFICA.</span></h2>
-                <p class="text-zinc-400 text-lg leading-relaxed italic">Diplomado en Medicina Deportiva y Actividad Física - PUC.</p>
-                <div class="glass p-8 border-l-4 border-earth">
-                    <p class="text-zinc-300 text-sm leading-relaxed italic font-light">"Entrenar duro es fácil. Entrenar inteligente es lo que genera longevidad. Aplicamos la ciencia deportiva para que tu proceso sea seguro, efectivo y definitivo."</p>
-                </div>
-                <div class="flex items-center gap-4 text-earth font-black text-[10px] tracking-[0.4em] uppercase">
-                    <i data-lucide="award"></i> Certificación Académica PUC
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-32 px-6 bg-black">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 reveal">
-            <div class="space-y-6">
-                <img src="09_Nicolas.jpg" alt="Inicios" class="w-full h-80 object-cover grayscale rounded-sm border border-white/5 shadow-xl">
-                <p class="text-[9px] font-bold uppercase tracking-widest text-zinc-600">Desde el Día 1: Inicios 2017</p>
-            </div>
-            <div class="space-y-6 md:pt-20">
-                <img src="07_Nicolas.jpg" alt="Coach Humano" class="w-full h-80 object-cover grayscale rounded-sm border border-white/5 shadow-xl hover:grayscale-0 transition-all">
-                <p class="text-[9px] font-bold uppercase tracking-widest text-earth text-center italic">Coaching Humano y Cercano</p>
-            </div>
-            <div class="space-y-6 md:pt-40">
-                <img src="01_Nicolas.png" alt="Construcción Diaria" class="w-full h-80 object-cover grayscale rounded-sm border border-white/5 shadow-xl">
-                <p class="text-[9px] font-bold uppercase tracking-widest text-zinc-600 text-right">Construcción Diaria. Sin atajos.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="tienda" class="py-40 px-6 bg-[#0a0a0a] border-y border-white/5">
-        <div class="max-w-5xl mx-auto glass p-10 md:p-20 flex flex-col md:flex-row items-center gap-16 rounded-sm reveal">
-            <div class="w-full md:w-1/2">
-                <img src="creatina_nicolas.png" alt="Creatina Nicolas Lobos" onerror="this.src='https://images.unsplash.com/photo-1593095191850-2a7330098fab?auto=format&fit=crop&q=80&w=600'" class="w-full max-w-xs mx-auto drop-shadow-[0_0_50px_rgba(140,120,81,0.2)] grayscale">
-            </div>
-            <div class="w-full md:w-1/2 space-y-8 text-center lg:text-left">
-                <div class="text-earth text-[9px] font-black uppercase tracking-[0.5em]">Línea Pro</div>
-                <h3 class="text-5xl font-black uppercase tracking-tighter italic text-white leading-none">CREATINA <br> PUREZA.</h3>
-                <p class="text-zinc-500 text-lg leading-relaxed italic font-light max-w-sm mx-auto lg:mx-0">300g / Monohidratada. Pureza absoluta certificada para fuerza explosiva y recuperación. Sin sabor.</p>
-                <div class="text-5xl font-black text-white tracking-tighter">$24.990 <span class="text-xs text-zinc-700 tracking-widest font-normal ml-2 uppercase">CLP</span></div>
-                <a href="https://wa.me/56978354063?text=Hola%20Nicolas,%20vi%20tu%20web%20y%20quiero%20la%20creatina%20con%20respaldo%20científico." target="_blank" class="btn-premium text-white px-10 py-5 rounded-sm font-black uppercase text-[10px] tracking-widest inline-flex items-center gap-4">
-                    SOLICITAR STOCK <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+            <div className="w-full md:w-2/3">
+              <div className="inline-block px-3 py-1 bg-[#8C7851]/20 text-[#8C7851] text-[10px] font-bold uppercase tracking-widest mb-4">Stock Disponible</div>
+              <h2 className="text-4xl font-bold mb-4">Creatina Monohidratada</h2>
+              <p className={`${colors.textMuted} text-lg mb-6`}>
+                Optimiza tu fuerza y volumen celular con la pureza que necesitas. Producto probado para máxima absorción sin rellenos innecesarios.
+              </p>
+              <div className="grid grid-cols-2 gap-4 mb-8">
+                <div className="flex items-center gap-2 text-sm"><CheckCircle2 className="w-4 h-4 text-[#8C7851]" /> 300g por envase</div>
+                <div className="flex items-center gap-2 text-sm"><CheckCircle2 className="w-4 h-4 text-[#8C7851]" /> 100% Pura</div>
+                <div className="flex items-center gap-2 text-sm"><CheckCircle2 className="w-4 h-4 text-[#8C7851]" /> Sin sabor</div>
+                <div className="flex items-center gap-2 text-sm"><CheckCircle2 className="w-4 h-4 text-[#8C7851]" /> Grado Farmacéutico</div>
+              </div>
+              <div className="flex items-center gap-8">
+                <span className="text-3xl font-bold">$24.990</span>
+                <a 
+                  href="https://wa.me/56912345678?text=Hola%20Nicolas,%20quiero%20consultar%20stock%20de%20la%20creatina." 
+                  target="_blank" 
+                  className={`${colors.accent} text-white px-8 py-4 rounded-sm font-bold uppercase text-xs tracking-widest flex items-center gap-2`}
+                >
+                  Consultar vía WhatsApp <MessageCircle size={16} />
                 </a>
+              </div>
             </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <section id="contacto" class="py-40 px-6 bg-earth border-b border-white/5">
-        <div class="max-w-4xl mx-auto bg-black p-10 md:p-24 rounded-sm shadow-2xl relative reveal">
-            <div class="absolute -top-20 -right-20 text-white/5">
-                <i data-lucide="dumbbell" class="w-96 h-96"></i>
+      {/* CONTACTO */}
+      <section id="contacto" className="py-24 px-6">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-4 uppercase tracking-tighter">Empecemos tu Cambio</h2>
+          <p className={`${colors.textMuted} mb-12`}>Completa el formulario y Nicolas te contactará para coordinar tu primera sesión o evaluación.</p>
+          
+          <form className="space-y-4 text-left" action="https://formspree.io/f/tu-id-aqui" method="POST">
+            <div className="grid md:grid-cols-2 gap-4">
+              <div className="space-y-2">
+                <label className="text-[10px] uppercase tracking-widest font-bold text-zinc-500">Nombre Completo</label>
+                <input 
+                  type="text" 
+                  name="nombre"
+                  required
+                  placeholder="Ej. Juan Pérez"
+                  className="w-full bg-[#1a1a1a] border border-[#2a2a2a] p-4 rounded-sm focus:outline-none focus:border-[#8C7851] transition-colors"
+                />
+              </div>
+              <div className="space-y-2">
+                <label className="text-[10px] uppercase tracking-widest font-bold text-zinc-500">Teléfono / WhatsApp</label>
+                <input 
+                  type="tel" 
+                  name="telefono"
+                  required
+                  placeholder="+56 9 XXXX XXXX"
+                  className="w-full bg-[#1a1a1a] border border-[#2a2a2a] p-4 rounded-sm focus:outline-none focus:border-[#8C7851] transition-colors"
+                />
+              </div>
             </div>
-            <div class="text-center mb-16 space-y-4">
-                <h2 class="text-5xl font-black uppercase tracking-tighter italic">DIAGNÓSTICO GRATIS</h2>
-                <p class="text-zinc-600 text-[9px] font-black uppercase tracking-[0.4em]">Inicia hoy tu transformación real.</p>
+            <div className="space-y-2">
+              <label className="text-[10px] uppercase tracking-widest font-bold text-zinc-500">Zona de Residencia</label>
+              <input 
+                type="text" 
+                name="zona"
+                required
+                placeholder="Ej. Las Condes, Santiago"
+                className="w-full bg-[#1a1a1a] border border-[#2a2a2a] p-4 rounded-sm focus:outline-none focus:border-[#8C7851] transition-colors"
+              />
             </div>
-            
-            <form action="https://formspree.io/f/tu-id-aqui" method="POST" class="space-y-8 text-left relative z-10">
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div class="space-y-2 text-left">
-                        <label class="text-[9px] uppercase font-black text-zinc-700 tracking-widest italic">Nombre Completo</label>
-                        <input type="text" name="nombre" required placeholder="Ej: Juan Pérez" class="w-full bg-white/5 border border-white/10 p-6 rounded-sm focus:border-earth outline-none text-white text-sm">
-                    </div>
-                    <div class="space-y-2 text-left">
-                        <label class="text-[9px] uppercase font-black text-zinc-700 tracking-widest italic">WhatsApp Móvil</label>
-                        <input type="tel" name="telefono" required placeholder="+56 9 XXXX XXXX" class="w-full bg-white/5 border border-white/10 p-6 rounded-sm focus:border-earth outline-none text-white text-sm">
-                    </div>
-                </div>
-                <div class="space-y-2 text-left">
-                    <label class="text-[9px] uppercase font-black text-zinc-700 tracking-widest italic">Objetivo Actual</label>
-                    <select name="objetivo" class="w-full bg-white/5 border border-white/10 p-6 rounded-sm focus:border-earth outline-none text-zinc-500 text-sm appearance-none cursor-pointer">
-                        <option>Bajar Porcentaje de Grasa (Definición)</option>
-                        <option>Aumento de Masa Muscular (Hipertrofia)</option>
-                        <option>Mejora de Técnica y Salud (Prevención)</option>
-                        <option>Asesoría Online (Desde cualquier lugar)</option>
-                    </select>
-                </div>
-                <div class="pt-8 text-center">
-                    <button type="submit" class="w-full bg-earth text-white py-8 rounded-sm font-black uppercase text-[12px] tracking-[0.5em] hover:brightness-110 transition-all shadow-xl italic">
-                        ENVIAR SOLICITUD AHORA
-                    </button>
-                </div>
-            </form>
+            <div className="space-y-2">
+              <label className="text-[10px] uppercase tracking-widest font-bold text-zinc-500">Tipo de Asesoría</label>
+              <select name="servicio" className="w-full bg-[#1a1a1a] border border-[#2a2a2a] p-4 rounded-sm focus:outline-none focus:border-[#8C7851] transition-colors appearance-none text-zinc-400">
+                <option>Asesoría Online</option>
+                <option>Entrenamiento Presencial</option>
+                <option>Consulta Suplementación</option>
+              </select>
+            </div>
+            <button className={`${colors.accent} w-full py-5 rounded-sm font-bold uppercase text-xs tracking-widest hover:brightness-110 transition-all mt-4`}>
+              Enviar Información
+            </button>
+          </form>
+
+          <div className="mt-16 pt-12 border-t border-[#2a2a2a] grid md:grid-cols-3 gap-8">
+            <div className="flex flex-col items-center gap-3">
+              <div className="w-12 h-12 rounded-full bg-[#1a1a1a] flex items-center justify-center text-[#8C7851]"><Instagram size={20} /></div>
+              <span className="text-xs font-bold">@nicolobosss</span>
+            </div>
+            <div className="flex flex-col items-center gap-3">
+              <div className="w-12 h-12 rounded-full bg-[#1a1a1a] flex items-center justify-center text-[#8C7851]"><MapPin size={20} /></div>
+              <span className="text-xs font-bold text-center">RM, Santiago de Chile</span>
+            </div>
+            <div className="flex flex-col items-center gap-3">
+              <div className="w-12 h-12 rounded-full bg-[#1a1a1a] flex items-center justify-center text-[#8C7851]"><Phone size={20} /></div>
+              <span className="text-xs font-bold">+56 9 1234 5678</span>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <footer class="py-32 bg-black px-6 text-center border-t border-white/5">
-        <div class="max-w-7xl mx-auto space-y-16">
-            <div class="text-4xl font-black uppercase tracking-tighter italic">NICOLAS<span class="text-earth">LOBOS</span></div>
-            <div class="flex justify-center gap-12 text-zinc-700">
-                <a href="https://www.instagram.com/nicolobosss/" target="_blank" class="hover:text-earth transition-colors"><i data-lucide="instagram" class="w-8 h-8"></i></a>
-                <a href="https://wa.me/56978354063" target="_blank" class="hover:text-earth transition-colors"><i data-lucide="message-circle" class="w-8 h-8"></i></a>
-            </div>
-            <p class="text-[9px] text-zinc-800 uppercase tracking-[0.6em] leading-relaxed">© 2026 Nicolas Lobos. <br> MEDICINA DEPORTIVA & HIGH PERFORMANCE. <br> SANTIAGO, CHILE.</p>
-        </div>
-    </footer>
+      {/* FOOTER */}
+      <footer className="py-12 border-t border-[#2a2a2a] text-center px-6">
+        <p className="text-[10px] text-zinc-600 uppercase tracking-widest">
+          © 2026 NICOLAS LOBOS - HIGH PERFORMANCE COACHING. <br />
+          TODOS LOS DERECHOS RESERVADOS.
+        </p>
+      </footer>
 
-    <a href="https://wa.me/56978354063?text=Hola%20Nicolas,%20vi%20tu%20web%20y%20quiero%20mi%20diagnóstico%20gratis." target="_blank" class="fixed bottom-10 right-10 bg-[#25D366] text-white p-5 rounded-full shadow-[0_0_60px_rgba(37,211,102,0.4)] hover:scale-110 transition-all z-[200] flex items-center justify-center">
-        <i data-lucide="message-circle" class="w-8 h-8"></i>
-    </a>
+      {/* WHATSAPP FLOAT */}
+      <a 
+        href="https://wa.me/56912345678?text=Hola%20Nicolas,%20vi%20tu%20web%20y%20quiero%20información%20sobre%20tus%20asesorías." 
+        target="_blank"
+        className="fixed bottom-8 right-8 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform z-[100]"
+      >
+        <MessageCircle size={24} />
+      </a>
+    </div>
+  );
+};
 
-    <script>
-        lucide.createIcons();
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('section').forEach(section => { section.classList.add('reveal'); observer.observe(section); });
-    </script>
-</body>
-</html>
+const BlogCard = ({ icon, title, text, colors }) => (
+  <div className={`${colors.card} p-8 border border-[#2a2a2a] hover:border-[#8C7851] transition-all group rounded-sm`}>
+    <div className={`mb-6 text-[#8C7851]`}>{icon}</div>
+    <h3 className="text-xl font-bold mb-4">{title}</h3>
+    <p className={`${colors.textMuted} text-sm mb-6 leading-relaxed`}>{text}</p>
+    <div className="flex items-center text-[10px] font-bold uppercase tracking-widest text-zinc-500 group-hover:text-white transition-colors cursor-pointer">
+      Leer más <ChevronRight size={12} className="ml-1" />
+    </div>
+  </div>
+);
+
+export default App;
