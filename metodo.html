@@ -3,44 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Metodología | Nicolás Lobos</title>
+    <title>The Method | Nicolás Lobos</title>
+
     <link rel="icon" type="image/png" href="favicon.png">
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/editorial.css">
+
     <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-        body { font-family: 'Montserrat', sans-serif; background-color: #080808; color: #e5e5e5; }
-        .text-earth { color: #8C7851; }
-        .bg-earth { background-color: #8C7851; }
-        .glass { background: rgba(255, 255, 255, 0.03); backdrop-blur: 10px; border: 1px solid rgba(255, 255, 255, 0.06); }
-        video { width: 100%; height: 100%; object-fit: cover; border-radius: 8px; filter: grayscale(100%); transition: 0.5s; }
-        .video-card:hover video { filter: grayscale(0%); }
-    </style>
 </head>
-<body class="overflow-x-hidden">
-    <header class="fixed top-0 w-full z-[100] bg-black border-b border-white/5 h-20 flex items-center">
+
+<body class="overflow-x-hidden bg-[#F3EFE8] text-[#2D2926]">
+
+    <header class="fixed top-0 w-full z-[100] bg-[#F3EFE8]/95 backdrop-blur-md border-b border-[#D9D0C3] h-20 flex items-center">
         <div class="max-w-7xl mx-auto px-6 w-full flex justify-between items-center">
-            <a href="index.html" class="text-xl md:text-2xl font-black tracking-tighter uppercase text-white">NICOLÁS<span class="text-earth">LOBOS</span></a>
-            <nav class="hidden lg:flex space-x-8 text-[10px] font-black uppercase tracking-[0.2em] items-center text-zinc-400">
+            <a href="index.html" class="text-xl md:text-2xl font-black tracking-tighter uppercase text-[#2D2926]">
+                NICOLÁS<span class="text-earth">LOBOS</span>
+            </a>
+            
+            <nav class="hidden lg:flex space-x-8 text-[10px] font-black uppercase tracking-[0.2em] items-center text-[#766d61]">
                 <a href="index.html" class="hover:text-earth transition-colors">INICIO</a>
-                <a href="metodo.html" class="text-white hover:text-earth transition-colors border-b border-earth pb-1">METODOLOGÍA</a>
+                <a href="metodo.html" class="text-[#2D2926] hover:text-earth transition-colors border-b border-earth pb-1">THE METHOD</a>
                 <a href="comunidad.html" class="hover:text-earth transition-colors">COMUNIDAD</a>
                 <a href="noticias.html" class="hover:text-earth transition-colors">NOTICIAS</a>
                 <a href="descargas.html" class="hover:text-earth transition-colors">DESCARGAS</a>
                 <a href="tienda.html" class="hover:text-earth transition-colors">TIENDA</a>
-                <a href="privada.html" class="text-earth border border-earth/30 px-3 py-1 rounded-sm hover:bg-earth/10 transition-all">ÁREA PRIVADA</a>
+                <a href="privada.html" class="text-earth border border-earth/40 px-3 py-1 rounded-sm hover:bg-earth/10 transition-all">ÁREA PRIVADA</a>
             </nav>
+
             <div class="flex items-center gap-3 md:gap-4">
-                <a href="https://www.instagram.com/nicolobosss/" target="_blank" rel="noopener noreferrer" class="hover:scale-110 transition-transform opacity-80 hover:opacity-100"><img src="logo_instagram.png" alt="Instagram" class="w-9 h-9 md:w-10 md:h-10 object-contain"></a>
-                <a href="https://www.tiktok.com/@nicolaslobos" target="_blank" rel="noopener noreferrer" class="hover:scale-110 transition-transform opacity-80 hover:opacity-100"><img src="logo_tiktok.png" alt="TikTok" class="w-9 h-9 md:w-10 md:h-10 object-contain"></a>
-                <a href="https://wa.me/56978354063?text=Vi%20tu%20p%C3%A1gina%20WEB%20y%20me%20interesa%20tu%20asesor%C3%ADa" target="_blank" rel="noopener noreferrer" class="hover:scale-110 transition-transform opacity-80 hover:opacity-100"><img src="logo_wsp.png" alt="WhatsApp" class="w-9 h-9 md:w-10 md:h-10 object-contain"></a>
-                <button id="mobile-menu-btn" class="lg:hidden text-white border border-white/10 p-2 rounded-sm ml-1" aria-label="Abrir menú móvil" aria-expanded="false" aria-controls="mobile-menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+                <a href="https://www.instagram.com/nicolobosss/" target="_blank" rel="noopener noreferrer" class="hover:scale-110 transition-transform opacity-80 hover:opacity-100">
+                    <img src="logo_instagram.png" alt="Instagram" class="w-9 h-9 md:w-10 md:h-10 object-contain">
+                </a>
+                <a href="https://www.tiktok.com/@nicolaslobos" target="_blank" rel="noopener noreferrer" class="hover:scale-110 transition-transform opacity-80 hover:opacity-100">
+                    <img src="logo_tiktok.png" alt="TikTok" class="w-9 h-9 md:w-10 md:h-10 object-contain">
+                </a>
+                <a href="https://wa.me/56978354063?text=Vi%20tu%20p%C3%A1gina%20WEB%20y%20me%20interesa%20tu%20asesor%C3%ADa" target="_blank" rel="noopener noreferrer" class="hover:scale-110 transition-transform opacity-80 hover:opacity-100">
+                    <img src="logo_wsp.png" alt="WhatsApp" class="w-9 h-9 md:w-10 md:h-10 object-contain">
+                </a>
+                <button id="mobile-menu-btn" class="lg:hidden text-[#2D2926] border border-[#2D2926]/10 p-2 rounded-sm ml-1" aria-label="Abrir menú móvil" aria-expanded="false" aria-controls="mobile-menu">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
             </div>
         </div>
-        <div id="mobile-menu" class="hidden lg:hidden absolute top-20 left-0 w-full bg-black border-t border-white/10 px-6 py-6 shadow-2xl">
-            <nav class="flex flex-col gap-5 text-[12px] font-black uppercase tracking-[0.2em] text-zinc-300">
+
+        <div id="mobile-menu" class="hidden lg:hidden absolute top-20 left-0 w-full bg-[#F8F4ED] border-t border-[#D9D0C3] px-6 py-6 shadow-2xl">
+            <nav class="flex flex-col gap-5 text-[12px] font-black uppercase tracking-[0.2em] text-[#766d61]">
                 <a href="index.html" class="hover:text-earth transition-colors">INICIO</a>
-                <a href="metodo.html" class="text-white hover:text-earth transition-colors">METODOLOGÍA</a>
+                <a href="metodo.html" class="text-[#2D2926] hover:text-earth transition-colors">THE METHOD</a>
                 <a href="comunidad.html" class="hover:text-earth transition-colors">COMUNIDAD</a>
                 <a href="noticias.html" class="hover:text-earth transition-colors">NOTICIAS</a>
                 <a href="descargas.html" class="hover:text-earth transition-colors">DESCARGAS</a>
@@ -49,39 +65,229 @@
             </nav>
         </div>
     </header>
-    <main class="pt-40 pb-24 px-6">
-        <div class="max-w-5xl mx-auto space-y-32">
-            <section class="grid lg:grid-cols-2 gap-20 items-center">
+
+    <main>
+
+        <!-- HERO -->
+        <section class="relative min-h-screen pt-28 px-6 section-editorial overflow-hidden">
+            <div class="absolute top-0 right-0 w-1/2 h-full bg-[#E8DFD2] hidden lg:block"></div>
+            <div class="absolute -bottom-40 -left-40 w-[420px] h-[420px] rounded-full bg-[#8C7851]/10 blur-3xl"></div>
+
+            <div class="relative z-10 max-w-7xl mx-auto min-h-[calc(100vh-7rem)] grid lg:grid-cols-[1.05fr_0.95fr] gap-16 items-center">
+                <div class="space-y-10 text-center lg:text-left py-16">
+                    <div class="space-y-4">
+                        <p class="editorial-kicker">Training Boutique</p>
+                        <p class="text-[13px] uppercase tracking-[0.55em] text-[#9C9284]">Science · Movement · Progression</p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <h1 class="editorial-title text-6xl md:text-8xl lg:text-9xl uppercase leading-[0.82] text-[#2D2926]">
+                            The<br>Method
+                        </h1>
+                        <div class="w-24 h-px bg-[#B8AA93] mx-auto lg:mx-0"></div>
+                        <p class="text-xl md:text-2xl text-[#4A453F] font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
+                            Entrenar no es hacer más ejercicios. Es tomar mejores decisiones durante más tiempo.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="https://wa.me/56978354063?text=Hola%20Nicol%C3%A1s%2C%20quiero%20conocer%20tu%20m%C3%A9todo%20de%20entrenamiento" target="_blank" rel="noopener noreferrer" class="bg-[#2D2926] text-[#F3EFE8] px-10 py-5 rounded-full font-black uppercase text-[10px] tracking-[0.3em] hover:bg-earth transition-all inline-flex items-center justify-center gap-3">
+                            Agendar diagnóstico
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#framework" class="border border-[#2D2926]/20 text-[#2D2926] px-10 py-5 rounded-full font-black uppercase text-[10px] tracking-[0.3em] hover:bg-[#2D2926] hover:text-[#F3EFE8] transition-all inline-flex items-center justify-center gap-3">
+                            Ver framework
+                            <i data-lucide="arrow-down" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="relative flex justify-center lg:justify-end pb-16 lg:pb-0">
+                    <div class="relative w-full max-w-[460px]">
+                        <div class="absolute -inset-5 border border-[#B8AA93]/40 rounded-[2rem]"></div>
+                        <img src="02_Nicolas.png" alt="Nicolás Lobos entrenando" class="relative w-full h-[500px] object-cover rounded-[2rem] grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl">
+                        <div class="absolute bottom-6 left-6 right-6 bg-[#F8F4ED]/90 backdrop-blur-md rounded-2xl p-5 border border-[#D9D0C3]">
+                            <p class="text-[10px] uppercase tracking-[0.35em] text-[#8C7851] font-black">No improvisar</p>
+                            <p class="font-serif text-3xl text-[#2D2926] mt-1">Entrenar con criterio.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FRAMEWORK -->
+        <section id="framework" class="py-28 px-6 section-editorial border-t border-[#D9D0C3]">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-20 space-y-6">
+                    <p class="editorial-kicker">Framework</p>
+                    <h2 class="editorial-title text-5xl md:text-7xl uppercase leading-none text-[#2D2926]">
+                        Cómo se construye el progreso
+                    </h2>
+                    <p class="text-lg md:text-xl text-[#4A453F] max-w-2xl mx-auto leading-relaxed font-light">
+                        El entrenamiento efectivo no depende de hacer más. Depende de evaluar mejor, moverse mejor, progresar con orden y recuperarse a tiempo.
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-4 gap-6">
+                    <article class="editorial-card p-8 min-h-[430px] flex flex-col relative overflow-hidden">
+                        <span class="absolute top-5 right-6 text-7xl font-black text-[#E7E0D6]">01</span>
+                        <div class="relative z-10 space-y-6 flex flex-col h-full">
+                            <p class="editorial-kicker">Assessment</p>
+                            <h3 class="editorial-title text-4xl leading-none text-[#2D2926]">Evaluar antes de avanzar.</h3>
+                            <p class="text-[#4A453F] leading-relaxed">Objetivos, historial, lesiones, experiencia, disponibilidad y contexto real. Sin diagnóstico, solo hay improvisación.</p>
+                            <div class="mt-auto w-14 h-14 rounded-full bg-earth/10 flex items-center justify-center"><i data-lucide="clipboard-check" class="w-6 h-6 text-earth"></i></div>
+                        </div>
+                    </article>
+
+                    <article class="editorial-card p-8 min-h-[430px] flex flex-col relative overflow-hidden">
+                        <span class="absolute top-5 right-6 text-7xl font-black text-[#E7E0D6]">02</span>
+                        <div class="relative z-10 space-y-6 flex flex-col h-full">
+                            <p class="editorial-kicker">Movement</p>
+                            <h3 class="editorial-title text-4xl leading-none text-[#2D2926]">Moverse con control.</h3>
+                            <p class="text-[#4A453F] leading-relaxed">Técnica, postura, rango de movimiento y control corporal. No se trata solo de levantar peso: se trata de hacerlo bien.</p>
+                            <div class="mt-auto w-14 h-14 rounded-full bg-earth/10 flex items-center justify-center"><i data-lucide="activity" class="w-6 h-6 text-earth"></i></div>
+                        </div>
+                    </article>
+
+                    <article class="editorial-card p-8 min-h-[430px] flex flex-col relative overflow-hidden">
+                        <span class="absolute top-5 right-6 text-7xl font-black text-[#E7E0D6]">03</span>
+                        <div class="relative z-10 space-y-6 flex flex-col h-full">
+                            <p class="editorial-kicker">Progression</p>
+                            <h3 class="editorial-title text-4xl leading-none text-[#2D2926]">Progresar con método.</h3>
+                            <p class="text-[#4A453F] leading-relaxed">Carga, volumen, intensidad y frecuencia se ajustan con intención. El progreso se mide, no se adivina.</p>
+                            <div class="mt-auto w-14 h-14 rounded-full bg-earth/10 flex items-center justify-center"><i data-lucide="trending-up" class="w-6 h-6 text-earth"></i></div>
+                        </div>
+                    </article>
+
+                    <article class="editorial-card p-8 min-h-[430px] flex flex-col relative overflow-hidden">
+                        <span class="absolute top-5 right-6 text-7xl font-black text-[#E7E0D6]">04</span>
+                        <div class="relative z-10 space-y-6 flex flex-col h-full">
+                            <p class="editorial-kicker">Recovery</p>
+                            <h3 class="editorial-title text-4xl leading-none text-[#2D2926]">Recuperar también es entrenar.</h3>
+                            <p class="text-[#4A453F] leading-relaxed">Sueño, estrés, adherencia y fatiga importan. Un plan sostenible considera la vida real, no solo el gimnasio.</p>
+                            <div class="mt-auto w-14 h-14 rounded-full bg-earth/10 flex items-center justify-center"><i data-lucide="moon" class="w-6 h-6 text-earth"></i></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- EVIDENCE -->
+        <section class="py-28 px-6 bg-[#F8F4ED] border-y border-[#D9D0C3]">
+            <div class="max-w-7xl mx-auto grid lg:grid-cols-[0.38fr_0.62fr] gap-16 items-center">
+                <div class="flex justify-center">
+                    <div class="bg-[#2D2926] border border-[#2D2926] rounded-[2rem] p-10 shadow-xl">
+                        <img src="Nicolas_11.png" alt="Logo Pontificia Universidad Católica de Chile" class="w-56 md:w-64 opacity-95">
+                    </div>
+                </div>
+
                 <div class="space-y-8 text-center lg:text-left">
-                    <div class="flex justify-center lg:justify-start"><img src="Nicolas_11.png" alt="Logo Pontificia Universidad Católica de Chile" class="w-56 md:w-64 mix-blend-lighten opacity-80"></div>
-                    <div class="inline-block px-4 py-1 border border-earth/30 bg-earth/5 text-earth text-[9px] font-black uppercase tracking-[0.35em] rounded-full italic">Ciencia aplicada</div>
-                    <h1 class="text-5xl md:text-6xl font-black uppercase italic tracking-tighter leading-tight">Entrenamiento con <br><span class="text-earth">Base Médica.</span></h1>
-                    <p class="text-zinc-400 text-lg leading-relaxed font-light max-w-xl mx-auto lg:mx-0">Ciencia aplicada para resultados sostenibles. Especialización en Medicina Deportiva y Actividad Física en la Pontificia Universidad Católica de Chile.</p>
+                    <p class="editorial-kicker">Evidence Based</p>
+                    <h2 class="editorial-title text-5xl md:text-7xl leading-none text-[#2D2926]">
+                        Experiencia, pero también evidencia.
+                    </h2>
+                    <p class="text-[#4A453F] text-lg md:text-xl leading-relaxed font-light max-w-3xl mx-auto lg:mx-0">
+                        Formación especializada en Medicina Deportiva y Actividad Física en la Pontificia Universidad Católica de Chile. La práctica importa, pero la base técnica también.
+                    </p>
+                    <div class="grid sm:grid-cols-3 gap-4 pt-4">
+                        <div class="border border-[#D9D0C3] rounded-2xl p-5 bg-[#F3EFE8]">
+                            <p class="text-earth text-[10px] font-black uppercase tracking-[0.3em]">01</p>
+                            <p class="font-serif text-2xl text-[#2D2926] mt-2">Criterio</p>
+                        </div>
+                        <div class="border border-[#D9D0C3] rounded-2xl p-5 bg-[#F3EFE8]">
+                            <p class="text-earth text-[10px] font-black uppercase tracking-[0.3em]">02</p>
+                            <p class="font-serif text-2xl text-[#2D2926] mt-2">Técnica</p>
+                        </div>
+                        <div class="border border-[#D9D0C3] rounded-2xl p-5 bg-[#F3EFE8]">
+                            <p class="text-earth text-[10px] font-black uppercase tracking-[0.3em]">03</p>
+                            <p class="font-serif text-2xl text-[#2D2926] mt-2">Seguimiento</p>
+                        </div>
+                    </div>
                 </div>
-                <img src="10_Nicolas.png" alt="Diploma Nicolás Lobos" class="w-full rounded-sm shadow-2xl border border-white/10 hover:scale-[1.02] transition-transform duration-500">
-            </section>
-            <section class="space-y-16">
-                <div class="space-y-4"><span class="text-earth text-[10px] font-black uppercase tracking-[0.35em]">Método técnico</span><h2 class="text-3xl md:text-4xl font-black uppercase italic tracking-tighter border-l-4 border-earth pl-6">Clínica Técnica</h2></div>
-                <div class="grid lg:grid-cols-2 gap-16 items-center">
-                    <div class="aspect-video bg-zinc-900 rounded-sm overflow-hidden video-card shadow-2xl border border-white/5"><video controls preload="metadata"><source src="Video_1.mp4#t=0.001" type="video/mp4"></video></div>
-                    <div class="space-y-6 text-center lg:text-left"><h3 class="text-2xl font-black uppercase italic text-earth">Entrenamiento Funcional Real</h3><p class="text-zinc-400 text-base leading-relaxed font-light italic">El objetivo no es solo moverse más: es moverse mejor, con control, intención y una técnica que proteja tu cuerpo.</p><div class="grid gap-4"><div class="glass p-5 rounded-xl flex gap-4 items-start"><i data-lucide="check" class="text-earth w-5 h-5 shrink-0 mt-1"></i><div><h4 class="text-white text-sm font-black uppercase">Trabajo multiplanar</h4><p class="text-zinc-500 text-sm leading-relaxed">Movimientos en distintos planos para mejorar fuerza, coordinación y control.</p></div></div><div class="glass p-5 rounded-xl flex gap-4 items-start"><i data-lucide="check" class="text-earth w-5 h-5 shrink-0 mt-1"></i><div><h4 class="text-white text-sm font-black uppercase">Musculatura estabilizadora</h4><p class="text-zinc-500 text-sm leading-relaxed">Fortalecimiento de estructuras clave para una ejecución más segura.</p></div></div><div class="glass p-5 rounded-xl flex gap-4 items-start"><i data-lucide="check" class="text-earth w-5 h-5 shrink-0 mt-1"></i><div><h4 class="text-white text-sm font-black uppercase">Prevención de lesiones</h4><p class="text-zinc-500 text-sm leading-relaxed">Técnica, progresión y control de cargas para entrenar con continuidad.</p></div></div></div></div>
+            </div>
+        </section>
+
+        <!-- PROCESS -->
+        <section class="py-28 px-6 section-editorial">
+            <div class="max-w-6xl mx-auto grid lg:grid-cols-[0.9fr_1.1fr] gap-16 items-start">
+                <div class="space-y-7 text-center lg:text-left lg:sticky lg:top-32">
+                    <p class="editorial-kicker">Client Journey</p>
+                    <h2 class="editorial-title text-5xl md:text-7xl leading-none text-[#2D2926]">
+                        De la primera sesión al progreso real.
+                    </h2>
+                    <p class="text-[#4A453F] text-lg leading-relaxed font-light max-w-xl mx-auto lg:mx-0">
+                        El proceso se ordena para que cada etapa tenga sentido. Menos promesas vacías, más dirección.
+                    </p>
                 </div>
-            </section>
-            <section class="grid lg:grid-cols-2 gap-16 items-center"><div class="space-y-8 order-2 lg:order-1 text-center lg:text-left"><span class="text-earth text-[10px] font-black uppercase tracking-[0.35em]">Mentalidad de proceso</span><h3 class="text-3xl md:text-4xl font-black uppercase italic tracking-tighter">Disciplina sobre ganas</h3><div class="glass p-8 border-l-4 border-earth italic text-zinc-300 text-xl leading-relaxed">“La mayoría espera ganas. Algunos simplemente cumplen.”</div><p class="text-zinc-400 text-base italic font-light leading-relaxed">Construcción diaria sin atajos. La fuerza, la constancia y la técnica son pilares del progreso real.</p></div><div class="aspect-[9/16] max-w-sm mx-auto bg-zinc-900 rounded-sm overflow-hidden video-card order-1 lg:order-2 shadow-2xl border border-white/5 w-full"><video controls preload="metadata"><source src="Video_4.mp4#t=0.001" type="video/mp4"></video></div></section>
-        </div>
+
+                <div class="space-y-5">
+                    <div class="bg-[#F8F4ED] border border-[#D9D0C3] rounded-2xl p-7 grid sm:grid-cols-[0.18fr_0.82fr] gap-5 items-start">
+                        <p class="editorial-title text-5xl text-earth">01</p>
+                        <div><h3 class="font-serif text-3xl text-[#2D2926]">Diagnóstico inicial</h3><p class="text-[#6C6257] leading-relaxed mt-2">Conversación, objetivo, contexto, historial y punto de partida.</p></div>
+                    </div>
+                    <div class="bg-[#F8F4ED] border border-[#D9D0C3] rounded-2xl p-7 grid sm:grid-cols-[0.18fr_0.82fr] gap-5 items-start">
+                        <p class="editorial-title text-5xl text-earth">02</p>
+                        <div><h3 class="font-serif text-3xl text-[#2D2926]">Plan de entrenamiento</h3><p class="text-[#6C6257] leading-relaxed mt-2">Diseño de estructura según nivel, disponibilidad, objetivo y adherencia posible.</p></div>
+                    </div>
+                    <div class="bg-[#F8F4ED] border border-[#D9D0C3] rounded-2xl p-7 grid sm:grid-cols-[0.18fr_0.82fr] gap-5 items-start">
+                        <p class="editorial-title text-5xl text-earth">03</p>
+                        <div><h3 class="font-serif text-3xl text-[#2D2926]">Ejecución guiada</h3><p class="text-[#6C6257] leading-relaxed mt-2">Corrección técnica, control de carga y adaptación del entrenamiento.</p></div>
+                    </div>
+                    <div class="bg-[#F8F4ED] border border-[#D9D0C3] rounded-2xl p-7 grid sm:grid-cols-[0.18fr_0.82fr] gap-5 items-start">
+                        <p class="editorial-title text-5xl text-earth">04</p>
+                        <div><h3 class="font-serif text-3xl text-[#2D2926]">Seguimiento</h3><p class="text-[#6C6257] leading-relaxed mt-2">Revisión de métricas, ajustes y decisiones para seguir progresando.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="py-28 px-6 bg-[#F8F4ED] border-y border-[#D9D0C3]">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-16 space-y-6">
+                    <p class="editorial-kicker">FAQ</p>
+                    <h2 class="editorial-title text-5xl md:text-7xl leading-none text-[#2D2926]">Antes de empezar.</h2>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-5">
+                    <div class="bg-[#F3EFE8] border border-[#D9D0C3] rounded-2xl p-7"><h3 class="font-serif text-3xl text-[#2D2926]">¿Necesito experiencia?</h3><p class="text-[#6C6257] leading-relaxed mt-3">No. El proceso se adapta a tu nivel, historial y objetivo.</p></div>
+                    <div class="bg-[#F3EFE8] border border-[#D9D0C3] rounded-2xl p-7"><h3 class="font-serif text-3xl text-[#2D2926]">¿Puedo comenzar con lesiones?</h3><p class="text-[#6C6257] leading-relaxed mt-3">Depende del caso. Se evalúa antes de definir el plan y la intensidad.</p></div>
+                    <div class="bg-[#F3EFE8] border border-[#D9D0C3] rounded-2xl p-7"><h3 class="font-serif text-3xl text-[#2D2926]">¿Cuántas veces por semana?</h3><p class="text-[#6C6257] leading-relaxed mt-3">Lo que puedas sostener. La adherencia pesa más que el entusiasmo inicial.</p></div>
+                    <div class="bg-[#F3EFE8] border border-[#D9D0C3] rounded-2xl p-7"><h3 class="font-serif text-3xl text-[#2D2926]">¿Entrenas hombres y mujeres?</h3><p class="text-[#6C6257] leading-relaxed mt-3">Sí. El entrenamiento se adapta al objetivo, contexto y preferencia de cada persona.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="py-28 px-6 section-editorial">
+            <div class="max-w-4xl mx-auto text-center space-y-8">
+                <p class="editorial-kicker">Start Here</p>
+                <h2 class="editorial-title text-5xl md:text-7xl leading-none text-[#2D2926]">
+                    Comienza con una evaluación.
+                </h2>
+                <p class="text-[#4A453F] text-lg leading-relaxed max-w-2xl mx-auto">
+                    Si quieres entrenar con más estructura, agenda un diagnóstico inicial y revisamos el formato más adecuado para ti.
+                </p>
+                <a href="https://wa.me/56978354063?text=Hola%20Nicol%C3%A1s%2C%20quiero%20agendar%20una%20evaluaci%C3%B3n%20inicial" target="_blank" rel="noopener noreferrer" class="inline-flex bg-[#25D366] text-white px-12 py-6 rounded-full font-black uppercase text-[12px] tracking-[0.35em] hover:brightness-110 transition-all shadow-xl items-center justify-center gap-4">
+                    Agendar por WhatsApp
+                    <i data-lucide="message-circle" class="w-6 h-6"></i>
+                </a>
+            </div>
+        </section>
+
     </main>
-    <footer class="py-16 bg-black px-6 text-center border-t border-white/5"><p class="text-[12px] text-white uppercase tracking-[0.2em]">Instagram <a href="https://www.instagram.com/nicolobosss/" target="_blank" rel="noopener noreferrer" class="underline hover:text-zinc-300">@nicolobosss</a> - 2026 Nicolás Lobos. Santiago, Chile.</p></footer>
-    <a href="https://wa.me/56978354063?text=Vi%20tu%20p%C3%A1gina%20WEB%20y%20me%20interesa%20tu%20asesor%C3%ADa" target="_blank" rel="noopener noreferrer" class="fixed bottom-10 right-10 bg-[#25D366] text-white p-5 rounded-full shadow-[0_0_20px_rgba(37,211,102,0.3)] hover:scale-110 transition-all z-[200]"><i data-lucide="message-circle" class="w-8 h-8"></i></a>
-    <script>
-        lucide.createIcons();
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        if (mobileMenuBtn && mobileMenu) {
-            mobileMenuBtn.addEventListener('click', () => {
-                const isHidden = mobileMenu.classList.toggle('hidden');
-                mobileMenuBtn.setAttribute('aria-expanded', String(!isHidden));
-            });
-        }
-    </script>
+
+    <footer class="py-16 bg-[#F3EFE8] px-6 text-center border-t border-[#D9D0C3]">
+        <p class="text-[12px] text-[#2D2926] uppercase tracking-[0.2em]">
+            Instagram <a href="https://www.instagram.com/nicolobosss/" target="_blank" rel="noopener noreferrer" class="underline hover:text-earth">@nicolobosss</a> - 2026 Nicolás Lobos. Santiago, Chile.
+        </p>
+    </footer>
+
+    <a href="https://wa.me/56978354063?text=Hola%20Nicol%C3%A1s%2C%20quiero%20conocer%20tu%20m%C3%A9todo%20de%20entrenamiento" target="_blank" rel="noopener noreferrer" class="fixed bottom-10 right-10 bg-[#25D366] text-white p-5 rounded-full shadow-[0_0_20px_rgba(37,211,102,0.3)] hover:scale-110 transition-all z-[200]">
+        <i data-lucide="message-circle" class="w-8 h-8"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+
 </body>
 </html>
