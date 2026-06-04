@@ -1,0 +1,98 @@
+/* =========================================================
+   NICOLÁS LOBOS — MAIN STYLES
+   Base compartida para toda la web.
+   ========================================================= */
+
+:root {
+    --color-black: #080808;
+    --color-black-soft: #0c0c0c;
+    --color-white: #ffffff;
+    --color-text: #e5e5e5;
+    --color-muted: #a1a1aa;
+    --color-muted-dark: #71717a;
+    --color-earth: #8C7851;
+    --color-earth-light: #a68d5f;
+    --color-border-light: rgba(255, 255, 255, 0.08);
+    --color-glass: rgba(255, 255, 255, 0.03);
+
+    --font-main: 'Montserrat', sans-serif;
+    --font-serif: 'Cormorant Garamond', serif;
+
+    --radius-sm: 4px;
+    --radius-md: 12px;
+    --radius-lg: 24px;
+
+    --shadow-premium: 0 20px 40px -15px rgba(140, 120, 81, 0.5);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--color-black);
+    color: var(--color-text);
+}
+
+/* Helpers */
+.text-earth { color: var(--color-earth); }
+.bg-earth { background-color: var(--color-earth); }
+.font-serif { font-family: var(--font-serif); }
+
+.glass {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(10px);
+    border: 0.5px solid var(--color-border-light);
+}
+
+.btn-premium {
+    background-color: var(--color-earth);
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.btn-premium:hover {
+    background-color: var(--color-earth-light);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-premium);
+}
+
+.puc-thin-border {
+    border: 0.5px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.01);
+    transition: all 0.5s ease;
+}
+
+.puc-thin-border:hover {
+    border-color: rgba(140, 120, 81, 0.3);
+}
+
+/* Header / mobile menu */
+.site-header {
+    background: rgba(0, 0, 0, 0.96);
+    backdrop-filter: blur(10px);
+}
+
+.mobile-menu-panel {
+    background: #000;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Images */
+img {
+    max-width: 100%;
+}
+
+/* Utility for product/cards */
+.card-hover-img img {
+    transition: transform 0.7s ease, filter 0.7s ease;
+}
+
+.card-hover-img:hover img {
+    transform: scale(1.05);
+    filter: grayscale(0);
+}
