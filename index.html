@@ -19,22 +19,22 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
-<body class="overflow-x-hidden">
+<body class="overflow-x-hidden bg-[#F3EFE8] text-[#2D2926]">
 
-    <header class="site-header fixed top-0 w-full z-[100] border-b border-white/5 h-20 flex items-center">
+    <header class="fixed top-0 w-full z-[100] bg-[#F3EFE8]/95 backdrop-blur-md border-b border-[#D9D0C3] h-20 flex items-center">
         <div class="max-w-7xl mx-auto px-6 w-full flex justify-between items-center">
-            <a href="index.html" class="text-xl md:text-2xl font-black tracking-tighter uppercase text-white">
+            <a href="index.html" class="text-xl md:text-2xl font-black tracking-tighter uppercase text-[#2D2926]">
                 NICOLÁS<span class="text-earth">LOBOS</span>
             </a>
             
-            <nav class="hidden lg:flex space-x-8 text-[10px] font-black uppercase tracking-[0.2em] items-center text-zinc-400">
-                <a href="index.html" class="text-white hover:text-earth transition-colors">INICIO</a>
+            <nav class="hidden lg:flex space-x-8 text-[10px] font-black uppercase tracking-[0.2em] items-center text-[#766d61]">
+                <a href="index.html" class="text-[#2D2926] hover:text-earth transition-colors">INICIO</a>
                 <a href="metodo.html" class="hover:text-earth transition-colors">METODOLOGÍA</a>
                 <a href="comunidad.html" class="hover:text-earth transition-colors">COMUNIDAD</a>
                 <a href="noticias.html" class="hover:text-earth transition-colors">NOTICIAS</a>
                 <a href="descargas.html" class="hover:text-earth transition-colors">DESCARGAS</a>
                 <a href="tienda.html" class="hover:text-earth transition-colors">TIENDA</a>
-                <a href="privada.html" class="text-earth border border-earth/30 px-3 py-1 rounded-sm hover:bg-earth/10 transition-all">ÁREA PRIVADA</a>
+                <a href="privada.html" class="text-earth border border-earth/40 px-3 py-1 rounded-sm hover:bg-earth/10 transition-all">ÁREA PRIVADA</a>
             </nav>
 
             <div class="flex items-center gap-3 md:gap-4">
@@ -50,15 +50,15 @@
                     <img src="logo_wsp.png" alt="WhatsApp" class="w-9 h-9 md:w-10 md:h-10 object-contain">
                 </a>
 
-                <button id="mobile-menu-btn" class="lg:hidden text-white border border-white/10 p-2 rounded-sm ml-1" aria-label="Abrir menú móvil" aria-expanded="false" aria-controls="mobile-menu">
+                <button id="mobile-menu-btn" class="lg:hidden text-[#2D2926] border border-[#2D2926]/10 p-2 rounded-sm ml-1" aria-label="Abrir menú móvil" aria-expanded="false" aria-controls="mobile-menu">
                     <i data-lucide="menu" class="w-6 h-6"></i>
                 </button>
             </div>
         </div>
 
-        <div id="mobile-menu" class="mobile-menu-panel hidden lg:hidden absolute top-20 left-0 w-full px-6 py-6 shadow-2xl">
-            <nav class="flex flex-col gap-5 text-[12px] font-black uppercase tracking-[0.2em] text-zinc-300">
-                <a href="index.html" class="text-white hover:text-earth transition-colors">INICIO</a>
+        <div id="mobile-menu" class="hidden lg:hidden absolute top-20 left-0 w-full bg-[#F8F4ED] border-t border-[#D9D0C3] px-6 py-6 shadow-2xl">
+            <nav class="flex flex-col gap-5 text-[12px] font-black uppercase tracking-[0.2em] text-[#766d61]">
+                <a href="index.html" class="text-[#2D2926] hover:text-earth transition-colors">INICIO</a>
                 <a href="metodo.html" class="hover:text-earth transition-colors">METODOLOGÍA</a>
                 <a href="comunidad.html" class="hover:text-earth transition-colors">COMUNIDAD</a>
                 <a href="noticias.html" class="hover:text-earth transition-colors">NOTICIAS</a>
@@ -222,43 +222,43 @@
             </div>
         </section>
 
-        <!-- METODO / CONTRASTE OSCURO -->
-        <section class="py-28 px-6 bg-[#080808] border-y border-white/5">
+        <!-- METODO -->
+        <section class="py-28 px-6 bg-[#F8F4ED] border-y border-[#D9D0C3]">
             <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
                 <div class="space-y-7 text-center lg:text-left">
-                    <span class="text-earth text-[10px] font-black uppercase tracking-[0.35em]">Método profesional</span>
-                    <h2 class="text-4xl md:text-6xl font-black uppercase italic tracking-tighter leading-tight text-white">
-                        Entrenar mejor, <br><span class="text-earth">no solo entrenar más.</span>
+                    <p class="editorial-kicker">Método profesional</p>
+                    <h2 class="editorial-title text-5xl md:text-7xl leading-none text-[#2D2926]">
+                        Entrenar mejor, no solo entrenar más.
                     </h2>
-                    <p class="text-zinc-400 text-lg leading-relaxed font-light max-w-xl mx-auto lg:mx-0">
+                    <p class="text-[#4A453F] text-lg leading-relaxed font-light max-w-xl mx-auto lg:mx-0">
                         Técnica, progresión, control de carga y seguimiento. Una guía profesional para cuidar tu cuerpo y convertir la constancia en resultados.
                     </p>
-                    <a href="metodo.html" class="inline-flex items-center gap-4 text-earth font-black text-[10px] tracking-[0.3em] uppercase border-b-2 border-earth pb-2">
+                    <a href="metodo.html" class="inline-flex items-center gap-4 text-[#8C7851] font-black text-[10px] tracking-[0.3em] uppercase border-b-2 border-[#8C7851] pb-2">
                         Ver metodología
                         <i data-lucide="chevron-right" class="w-4 h-4"></i>
                     </a>
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div class="glass p-7 rounded-xl space-y-4 hover:bg-white/5 transition-all">
+                    <div class="bg-[#F3EFE8] border border-[#D9D0C3] p-7 rounded-2xl space-y-4 hover:border-earth/40 transition-all">
                         <div class="w-12 h-12 rounded-full bg-earth/10 flex items-center justify-center"><i data-lucide="activity" class="w-5 h-5 text-earth"></i></div>
-                        <h3 class="text-white text-sm font-black uppercase tracking-wide">Evaluación</h3>
-                        <p class="text-zinc-400 text-sm leading-relaxed">Punto de partida claro antes de diseñar el entrenamiento.</p>
+                        <h3 class="text-[#2D2926] text-sm font-black uppercase tracking-wide">Evaluación</h3>
+                        <p class="text-[#6C6257] text-sm leading-relaxed">Punto de partida claro antes de diseñar el entrenamiento.</p>
                     </div>
-                    <div class="glass p-7 rounded-xl space-y-4 hover:bg-white/5 transition-all">
+                    <div class="bg-[#F3EFE8] border border-[#D9D0C3] p-7 rounded-2xl space-y-4 hover:border-earth/40 transition-all">
                         <div class="w-12 h-12 rounded-full bg-earth/10 flex items-center justify-center"><i data-lucide="shield-check" class="w-5 h-5 text-earth"></i></div>
-                        <h3 class="text-white text-sm font-black uppercase tracking-wide">Técnica segura</h3>
-                        <p class="text-zinc-400 text-sm leading-relaxed">Corrección y control para progresar sin improvisar.</p>
+                        <h3 class="text-[#2D2926] text-sm font-black uppercase tracking-wide">Técnica segura</h3>
+                        <p class="text-[#6C6257] text-sm leading-relaxed">Corrección y control para progresar sin improvisar.</p>
                     </div>
-                    <div class="glass p-7 rounded-xl space-y-4 hover:bg-white/5 transition-all">
+                    <div class="bg-[#F3EFE8] border border-[#D9D0C3] p-7 rounded-2xl space-y-4 hover:border-earth/40 transition-all">
                         <div class="w-12 h-12 rounded-full bg-earth/10 flex items-center justify-center"><i data-lucide="trending-up" class="w-5 h-5 text-earth"></i></div>
-                        <h3 class="text-white text-sm font-black uppercase tracking-wide">Progresión</h3>
-                        <p class="text-zinc-400 text-sm leading-relaxed">Avance medible, sostenible y adaptado a tu contexto.</p>
+                        <h3 class="text-[#2D2926] text-sm font-black uppercase tracking-wide">Progresión</h3>
+                        <p class="text-[#6C6257] text-sm leading-relaxed">Avance medible, sostenible y adaptado a tu contexto.</p>
                     </div>
-                    <div class="glass p-7 rounded-xl space-y-4 hover:bg-white/5 transition-all">
+                    <div class="bg-[#F3EFE8] border border-[#D9D0C3] p-7 rounded-2xl space-y-4 hover:border-earth/40 transition-all">
                         <div class="w-12 h-12 rounded-full bg-earth/10 flex items-center justify-center"><i data-lucide="message-circle" class="w-5 h-5 text-earth"></i></div>
-                        <h3 class="text-white text-sm font-black uppercase tracking-wide">Seguimiento</h3>
-                        <p class="text-zinc-400 text-sm leading-relaxed">Ajustes y acompañamiento para mantener dirección.</p>
+                        <h3 class="text-[#2D2926] text-sm font-black uppercase tracking-wide">Seguimiento</h3>
+                        <p class="text-[#6C6257] text-sm leading-relaxed">Ajustes y acompañamiento para mantener dirección.</p>
                     </div>
                 </div>
             </div>
@@ -290,29 +290,29 @@
         </section>
 
         <!-- CONTENIDO / COMUNIDAD -->
-        <section class="py-28 px-6 bg-black border-y border-white/5">
+        <section class="py-28 px-6 bg-[#F8F4ED] border-y border-[#D9D0C3]">
             <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-14 lg:gap-24 items-center">
                 <div class="space-y-7 text-center lg:text-left">
-                    <span class="text-earth text-[10px] font-black uppercase tracking-[0.35em]">Contenido & comunidad</span>
-                    <h2 class="text-4xl md:text-6xl font-black uppercase italic tracking-tighter leading-tight text-white">
-                        Más que un <br><span class="text-earth">entrenamiento.</span>
+                    <p class="editorial-kicker">Contenido & comunidad</p>
+                    <h2 class="editorial-title text-5xl md:text-7xl leading-none text-[#2D2926]">
+                        Más que un entrenamiento.
                     </h2>
-                    <p class="text-zinc-400 text-base md:text-lg leading-relaxed font-light max-w-xl mx-auto lg:mx-0">
+                    <p class="text-[#4A453F] text-base md:text-lg leading-relaxed font-light max-w-xl mx-auto lg:mx-0">
                         Aprende, entrena con criterio y conecta con una comunidad que entiende que la disciplina también se construye en equipo.
                     </p>
                     <div class="flex flex-wrap gap-6 pt-2 justify-center lg:justify-start">
                         <a href="noticias.html" class="text-earth font-black text-[11px] tracking-widest uppercase border-b border-earth/40 pb-2 hover:border-earth transition-all">Explorar tips</a>
-                        <a href="comunidad.html" class="text-white font-black text-[11px] tracking-widest uppercase border-b border-white/20 pb-2 hover:border-white transition-all">Ver comunidad</a>
-                        <a href="tienda.html" class="text-white font-black text-[11px] tracking-widest uppercase border-b border-white/20 pb-2 hover:border-white transition-all">Tienda</a>
+                        <a href="comunidad.html" class="text-[#2D2926] font-black text-[11px] tracking-widest uppercase border-b border-[#2D2926]/20 pb-2 hover:border-[#2D2926] transition-all">Ver comunidad</a>
+                        <a href="tienda.html" class="text-[#2D2926] font-black text-[11px] tracking-widest uppercase border-b border-[#2D2926]/20 pb-2 hover:border-[#2D2926] transition-all">Tienda</a>
                     </div>
                 </div>
 
-                <div class="relative rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl">
+                <div class="relative rounded-[2rem] overflow-hidden border border-[#D9D0C3] shadow-2xl">
                     <img src="img_comunidad.png" alt="Comunidad Nicolás Lobos" class="w-full h-[460px] object-cover grayscale hover:grayscale-0 transition-all duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#2D2926]/75 via-[#2D2926]/20 to-transparent"></div>
                     <div class="absolute bottom-6 left-6 right-6">
-                        <p class="text-earth text-[10px] font-black uppercase tracking-[0.35em]">Team Lobos</p>
-                        <h3 class="text-white text-3xl font-black uppercase italic mt-2">Cultura, técnica y constancia.</h3>
+                        <p class="text-[#F3EFE8] text-[10px] font-black uppercase tracking-[0.35em]">Team Lobos</p>
+                        <h3 class="font-serif text-[#F8F4ED] text-4xl mt-2">Cultura, técnica y constancia.</h3>
                     </div>
                 </div>
             </div>
@@ -337,9 +337,9 @@
 
     </main>
 
-    <footer class="py-16 bg-black px-6 text-center border-t border-white/5">
-        <p class="text-[12px] text-white uppercase tracking-[0.2em]">
-            Instagram <a href="https://www.instagram.com/nicolobosss/" target="_blank" rel="noopener noreferrer" class="underline hover:text-zinc-300">@nicolobosss</a> - 2026 Nicolás Lobos. Santiago, Chile.
+    <footer class="py-16 bg-[#F3EFE8] px-6 text-center border-t border-[#D9D0C3]">
+        <p class="text-[12px] text-[#2D2926] uppercase tracking-[0.2em]">
+            Instagram <a href="https://www.instagram.com/nicolobosss/" target="_blank" rel="noopener noreferrer" class="underline hover:text-earth">@nicolobosss</a> - 2026 Nicolás Lobos. Santiago, Chile.
         </p>
     </footer>
 
