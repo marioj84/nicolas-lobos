@@ -3,31 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nicolás Lobos | High Performance Coaching</title>
+    <title>Nicolás Lobos | Training Boutique</title>
 
     <link rel="icon" type="image/png" href="favicon.png">
 
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/editorial.css">
 
     <script src="https://unpkg.com/lucide@latest"></script>
-
-    <style>
-        body { font-family: 'Montserrat', sans-serif; background-color: #080808; color: #e5e5e5; }
-        .text-earth { color: #8C7851; }
-        .bg-earth { background-color: #8C7851; }
-        .btn-premium { background-color: #8C7851; transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1); }
-        .btn-premium:hover { background-color: #a68d5f; transform: translateY(-4px); box-shadow: 0 20px 40px -15px rgba(140, 120, 81, 0.5); }
-        .glass { background: rgba(255, 255, 255, 0.02); backdrop-blur: 10px; border: 0.5px solid rgba(255, 255, 255, 0.08); }
-        .puc-thin-border { border: 0.5px solid rgba(255, 255, 255, 0.1); background: rgba(255, 255, 255, 0.01); transition: all 0.5s ease; }
-        .puc-thin-border:hover { border-color: rgba(140, 120, 81, 0.3); }
-    </style>
 </head>
 
 <body class="overflow-x-hidden">
 
-    <header class="fixed top-0 w-full z-[100] bg-black border-b border-white/5 h-20 flex items-center">
+    <header class="site-header fixed top-0 w-full z-[100] border-b border-white/5 h-20 flex items-center">
         <div class="max-w-7xl mx-auto px-6 w-full flex justify-between items-center">
             <a href="index.html" class="text-xl md:text-2xl font-black tracking-tighter uppercase text-white">
                 NICOLÁS<span class="text-earth">LOBOS</span>
@@ -62,7 +56,7 @@
             </div>
         </div>
 
-        <div id="mobile-menu" class="hidden lg:hidden absolute top-20 left-0 w-full bg-black border-t border-white/10 px-6 py-6 shadow-2xl">
+        <div id="mobile-menu" class="mobile-menu-panel hidden lg:hidden absolute top-20 left-0 w-full px-6 py-6 shadow-2xl">
             <nav class="flex flex-col gap-5 text-[12px] font-black uppercase tracking-[0.2em] text-zinc-300">
                 <a href="index.html" class="text-white hover:text-earth transition-colors">INICIO</a>
                 <a href="metodo.html" class="hover:text-earth transition-colors">METODOLOGÍA</a>
@@ -75,84 +69,273 @@
         </div>
     </header>
 
-    <section id="inicio" class="relative min-h-screen flex items-center px-6 pt-20 overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <img src="02_Nicolas.png" alt="Nicolás entrenando en gimnasio" class="w-full h-full object-cover grayscale opacity-20">
-            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#080808]/80 to-[#080808]"></div>
-        </div>
+    <main>
 
-        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center relative z-10 w-full">
-            <div class="space-y-8 text-center lg:text-left">
-                <div class="inline-block px-4 py-1 border border-earth/30 bg-earth/5 text-earth text-[9px] font-black uppercase tracking-[0.5em] rounded-full italic">Ciencia | Disciplina | Resultados</div>
-                <h1 class="text-4xl md:text-7xl font-black leading-tight uppercase tracking-tighter italic">ENTRENAMIENTO <br>PERSONALIZADO CON <br><span class="text-earth">ENFOQUE REAL EN RESULTADOS</span></h1>
-                <p class="text-zinc-400 text-lg md:text-xl max-w-lg font-light leading-relaxed mx-auto lg:mx-0">Servicios adaptados a todas las edades y niveles, con experiencia en el ámbito deportivo y un acompañamiento 100% enfocado en tu progreso.</p>
-                <div class="flex flex-col sm:flex-row gap-6 pt-4 justify-center lg:justify-start">
-                    <a href="https://wa.me/56978354063?text=Vi%20tu%20p%C3%A1gina%20WEB%20y%20me%20interesa%20tu%20asesor%C3%ADa" target="_blank" rel="noopener noreferrer" class="btn-premium text-white px-12 py-6 rounded-sm font-black uppercase text-[11px] tracking-widest text-center shadow-2xl flex items-center justify-center gap-3">DIAGNÓSTICO POR WHATSAPP <i data-lucide="message-circle" class="w-4 h-4"></i></a>
-                    <a href="metodo.html" class="glass text-white px-10 py-6 rounded-sm font-bold uppercase text-[11px] tracking-widest flex items-center justify-center gap-3 hover:bg-white/5 transition-all"><i data-lucide="brain" class="w-5 h-5 text-earth"></i> MI METODOLOGÍA</a>
+        <!-- HERO EDITORIAL -->
+        <section id="inicio" class="relative min-h-screen pt-28 px-6 section-editorial overflow-hidden">
+            <div class="absolute top-0 right-0 w-1/2 h-full bg-[#E8DFD2] hidden lg:block"></div>
+            <div class="absolute -bottom-40 -left-40 w-[420px] h-[420px] rounded-full bg-[#8C7851]/10 blur-3xl"></div>
+
+            <div class="relative z-10 max-w-7xl mx-auto min-h-[calc(100vh-7rem)] grid lg:grid-cols-[0.95fr_1.05fr] gap-16 items-center">
+                <div class="space-y-10 text-center lg:text-left py-16">
+                    <div class="space-y-4">
+                        <p class="editorial-kicker">Santiago de Chile</p>
+                        <p class="text-[13px] uppercase tracking-[0.55em] text-[#9C9284]">Training Boutique</p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <h1 class="editorial-title text-6xl md:text-8xl lg:text-9xl uppercase leading-[0.82] text-[#2D2926]">
+                            Nicolás<br>Lobos
+                        </h1>
+                        <div class="w-24 h-px bg-[#B8AA93] mx-auto lg:mx-0"></div>
+                        <p class="text-xl md:text-2xl text-[#4A453F] font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
+                            Entrenamiento personal con método, técnica y seguimiento real para construir resultados sostenibles.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="https://wa.me/56978354063?text=Vi%20tu%20p%C3%A1gina%20WEB%20y%20me%20interesa%20tu%20asesor%C3%ADa" target="_blank" rel="noopener noreferrer" class="bg-[#2D2926] text-[#F3EFE8] px-10 py-5 rounded-full font-black uppercase text-[10px] tracking-[0.3em] hover:bg-earth transition-all inline-flex items-center justify-center gap-3">
+                            Diagnóstico por WhatsApp
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#servicios" class="border border-[#2D2926]/20 text-[#2D2926] px-10 py-5 rounded-full font-black uppercase text-[10px] tracking-[0.3em] hover:bg-[#2D2926] hover:text-[#F3EFE8] transition-all inline-flex items-center justify-center gap-3">
+                            Ver servicios
+                            <i data-lucide="arrow-down" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="relative flex justify-center lg:justify-end pb-16 lg:pb-0">
+                    <div class="relative w-full max-w-[520px]">
+                        <div class="absolute -inset-5 border border-[#B8AA93]/40 rounded-[2rem]"></div>
+                        <img src="foto_perfil.png" alt="Nicolás Lobos" class="relative w-full h-[560px] object-cover rounded-[2rem] grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl">
+                        <div class="absolute bottom-6 left-6 right-6 bg-[#F8F4ED]/90 backdrop-blur-md rounded-2xl p-5 border border-[#D9D0C3]">
+                            <p class="text-[10px] uppercase tracking-[0.35em] text-[#8C7851] font-black">Ciencia · Técnica · Constancia</p>
+                            <p class="font-serif text-3xl text-[#2D2926] mt-1">Bienestar con método.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="hidden lg:flex justify-end">
-                <div class="relative group">
-                    <div class="absolute -inset-4 bg-earth rounded-full blur opacity-10 group-hover:opacity-30 transition duration-1000"></div>
-                    <img src="foto_perfil.png" alt="Nicolás Lobos" class="relative w-[450px] h-[450px] rounded-full object-cover border-8 border-[#121212] grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl">
+        <!-- SERVICIOS -->
+        <section id="servicios" class="py-28 px-6 section-editorial border-t border-[#D9D0C3]">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-20 space-y-6">
+                    <p class="editorial-kicker">Servicios</p>
+                    <h2 class="editorial-title text-5xl md:text-7xl uppercase leading-none text-[#2D2926]">
+                        Entrena conmigo
+                    </h2>
+                    <p class="text-lg md:text-xl text-[#4A453F] max-w-2xl mx-auto leading-relaxed font-light">
+                        Elige el formato que mejor se adapta a tu objetivo, nivel y disponibilidad. Entrenamiento claro, guiado y medible.
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-3 gap-8">
+
+                    <article class="editorial-card relative p-8 md:p-10 min-h-[600px] flex flex-col overflow-hidden">
+                        <span class="absolute top-8 right-8 text-[8rem] leading-none font-black text-[#E7E0D6] opacity-80">01</span>
+                        <div class="relative z-10 space-y-8 flex flex-col h-full">
+                            <div class="space-y-4">
+                                <p class="editorial-kicker">Servicio 01</p>
+                                <h3 class="editorial-title text-4xl md:text-5xl leading-tight text-[#2D2926]">Semi<br>personalizado</h3>
+                                <p class="text-[13px] uppercase tracking-[0.45em] text-[#9C9284]">Grupos reducidos</p>
+                            </div>
+                            <div class="w-20 h-px bg-[#B8AA93]"></div>
+                            <p class="text-[#4A453F] text-lg leading-loose">Entrenamiento guiado en grupos pequeños. Atención cercana, corrección técnica y avance progresivo.</p>
+                            <ul class="text-[#3A3631] mt-2">
+                                <li class="border-b border-[#DDD5CA] py-3 flex gap-3"><span class="text-[#B8AA93]">•</span> Programa diseñado según objetivo</li>
+                                <li class="border-b border-[#DDD5CA] py-3 flex gap-3"><span class="text-[#B8AA93]">•</span> Grupos de máximo 8 personas</li>
+                                <li class="border-b border-[#DDD5CA] py-3 flex gap-3"><span class="text-[#B8AA93]">•</span> Seguimiento quincenal de métricas</li>
+                            </ul>
+                            <div class="mt-auto pt-10 border-t border-[#CFC6B8]">
+                                <div class="flex items-end gap-3 justify-between">
+                                    <div>
+                                        <p class="text-[11px] uppercase tracking-[0.45em] text-[#9C9284]">Desde</p>
+                                        <p class="editorial-price text-5xl text-[#2D2926]">$60.000</p>
+                                    </div>
+                                    <p class="text-[#9C9284] tracking-[0.25em] text-sm">/ mes</p>
+                                </div>
+                                <a href="https://wa.me/56978354063?text=Hola%20Nicol%C3%A1s%2C%20me%20interesa%20el%20servicio%20semi%20personalizado" target="_blank" rel="noopener noreferrer" class="mt-8 inline-flex w-full justify-center items-center px-6 py-4 rounded-full bg-[#2D2926] text-[#F3EFE8] text-[11px] uppercase tracking-[0.3em] font-bold hover:bg-earth transition-all">Consultar</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="relative border border-[#2D2926] rounded-[2rem] p-8 md:p-10 min-h-[600px] flex flex-col overflow-hidden bg-[#EFE8DD] shadow-2xl">
+                        <span class="absolute top-8 right-8 text-[8rem] leading-none font-black text-[#E1D8CB] opacity-90">02</span>
+                        <div class="absolute top-8 right-10 z-20 bg-[#2D2926] text-[#F3EFE8] rounded-full px-5 py-2 text-[10px] uppercase tracking-[0.35em] font-bold">Más elegido</div>
+                        <div class="relative z-10 space-y-8 flex flex-col h-full">
+                            <div class="space-y-4">
+                                <p class="editorial-kicker">Servicio 02</p>
+                                <h3 class="editorial-title text-4xl md:text-5xl leading-tight text-[#2D2926]">Entrena<br>miento<br>personal</h3>
+                                <p class="text-[13px] uppercase tracking-[0.45em] text-[#9C9284]">1 a 1 con tu entrenador</p>
+                            </div>
+                            <div class="w-20 h-px bg-[#B8AA93]"></div>
+                            <p class="text-[#4A453F] text-lg leading-loose">Sesiones exclusivas contigo y tu entrenador. El máximo nivel de atención, técnica y resultados.</p>
+                            <ul class="text-[#3A3631] mt-2">
+                                <li class="border-b border-[#D5CABC] py-3 flex gap-3"><span class="text-[#B8AA93]">•</span> Plan 100% personalizado</li>
+                                <li class="border-b border-[#D5CABC] py-3 flex gap-3"><span class="text-[#B8AA93]">•</span> Seguimiento semanal de progreso</li>
+                                <li class="border-b border-[#D5CABC] py-3 flex gap-3"><span class="text-[#B8AA93]">•</span> Ajuste continuo del programa</li>
+                            </ul>
+                            <div class="mt-auto pt-10 border-t border-[#CFC6B8]">
+                                <div class="flex items-end gap-3 justify-between">
+                                    <div>
+                                        <p class="text-[11px] uppercase tracking-[0.45em] text-[#9C9284]">Desde</p>
+                                        <p class="editorial-price text-5xl text-[#2D2926]">$100.000</p>
+                                    </div>
+                                    <p class="text-[#9C9284] tracking-[0.25em] text-sm">/ mes</p>
+                                </div>
+                                <a href="https://wa.me/56978354063?text=Hola%20Nicol%C3%A1s%2C%20me%20interesa%20el%20entrenamiento%20personal" target="_blank" rel="noopener noreferrer" class="mt-8 inline-flex w-full justify-center items-center px-6 py-4 rounded-full bg-[#2D2926] text-[#F3EFE8] text-[11px] uppercase tracking-[0.3em] font-bold hover:bg-earth transition-all">Consultar</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="editorial-card relative p-8 md:p-10 min-h-[600px] flex flex-col overflow-hidden">
+                        <span class="absolute top-8 right-8 text-[8rem] leading-none font-black text-[#E7E0D6] opacity-80">03</span>
+                        <div class="relative z-10 space-y-8 flex flex-col h-full">
+                            <div class="space-y-4">
+                                <p class="editorial-kicker">Servicio 03</p>
+                                <h3 class="editorial-title text-4xl md:text-5xl leading-tight text-[#2D2926]">Small<br>Group</h3>
+                                <p class="text-[13px] uppercase tracking-[0.45em] text-[#9C9284]">Comunidad & rendimiento</p>
+                            </div>
+                            <div class="w-20 h-px bg-[#B8AA93]"></div>
+                            <p class="text-[#4A453F] text-lg leading-loose">El equilibrio perfecto entre comunidad y resultados. Grupos de hasta 6 personas con dinámica de equipo.</p>
+                            <ul class="text-[#3A3631] mt-2">
+                                <li class="border-b border-[#DDD5CA] py-3 flex gap-3"><span class="text-[#B8AA93]">•</span> Grupos de máximo 6 personas</li>
+                                <li class="border-b border-[#DDD5CA] py-3 flex gap-3"><span class="text-[#B8AA93]">•</span> Dinámica grupal motivadora</li>
+                                <li class="border-b border-[#DDD5CA] py-3 flex gap-3"><span class="text-[#B8AA93]">•</span> Seguimiento mensual de métricas</li>
+                            </ul>
+                            <div class="mt-auto pt-10 border-t border-[#CFC6B8]">
+                                <div class="flex items-end gap-3 justify-between">
+                                    <div>
+                                        <p class="text-[11px] uppercase tracking-[0.45em] text-[#9C9284]">Desde</p>
+                                        <p class="editorial-price text-5xl text-[#2D2926]">$90.000</p>
+                                    </div>
+                                    <p class="text-[#9C9284] tracking-[0.25em] text-sm">/ mes</p>
+                                </div>
+                                <a href="https://wa.me/56978354063?text=Hola%20Nicol%C3%A1s%2C%20me%20interesa%20el%20Small%20Group" target="_blank" rel="noopener noreferrer" class="mt-8 inline-flex w-full justify-center items-center px-6 py-4 rounded-full bg-[#2D2926] text-[#F3EFE8] text-[11px] uppercase tracking-[0.3em] font-bold hover:bg-earth transition-all">Consultar</a>
+                            </div>
+                        </div>
+                    </article>
+
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="py-20 px-6 bg-[#080808]">
-        <div class="max-w-4xl mx-auto text-center space-y-8">
-            <h2 class="text-2xl md:text-4xl font-black uppercase italic tracking-tighter text-white">Guía Profesional <span class="text-earth">Donde lo necesites</span></h2>
-            <p class="text-zinc-500 text-lg leading-relaxed italic font-light">Entrena en gimnasio o a domicilio, con una guía profesional que cuida tu técnica, optimiza tu rendimiento y protege tu salud en cada sesión.</p>
-            <div class="flex justify-center gap-12 pt-6">
-                <div class="flex flex-col items-center gap-3"><i data-lucide="map-pin" class="w-10 h-10 text-earth"></i><span class="text-[12px] font-black uppercase tracking-widest text-zinc-400">Gimnasio</span></div>
-                <div class="flex flex-col items-center gap-3"><i data-lucide="home" class="w-10 h-10 text-earth"></i><span class="text-[12px] font-black uppercase tracking-widest text-zinc-400">A domicilio</span></div>
-            </div>
-        </div>
-    </section>
+        <!-- METODO / CONTRASTE OSCURO -->
+        <section class="py-28 px-6 bg-[#080808] border-y border-white/5">
+            <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-7 text-center lg:text-left">
+                    <span class="text-earth text-[10px] font-black uppercase tracking-[0.35em]">Método profesional</span>
+                    <h2 class="text-4xl md:text-6xl font-black uppercase italic tracking-tighter leading-tight text-white">
+                        Entrenar mejor, <br><span class="text-earth">no solo entrenar más.</span>
+                    </h2>
+                    <p class="text-zinc-400 text-lg leading-relaxed font-light max-w-xl mx-auto lg:mx-0">
+                        Técnica, progresión, control de carga y seguimiento. Una guía profesional para cuidar tu cuerpo y convertir la constancia en resultados.
+                    </p>
+                    <a href="metodo.html" class="inline-flex items-center gap-4 text-earth font-black text-[10px] tracking-[0.3em] uppercase border-b-2 border-earth pb-2">
+                        Ver metodología
+                        <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
 
-    <section class="py-32 px-6 bg-[#0c0c0c] border-y border-white/5">
-        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
-            <div class="w-full lg:w-1/3 flex justify-center">
-                <img src="Nicolas_11.png" alt="Logo Pontificia Universidad Católica de Chile" class="w-56 md:w-64 mix-blend-lighten opacity-80">
-            </div>
-            <div class="w-full lg:w-2/3 space-y-6 text-center lg:text-left">
-                <h2 class="text-4xl font-black uppercase italic tracking-tighter">Formación <span class="text-earth">Académica.</span></h2>
-                <p class="text-zinc-500 text-lg leading-relaxed font-light italic">Especialización en Medicina Deportiva y Actividad Física en la Pontificia Universidad Católica de Chile. Entrenamos con ciencia, no con suposiciones.</p>
-                <a href="metodo.html" class="inline-flex items-center gap-4 text-earth font-black text-[10px] tracking-[0.3em] uppercase border-b-2 border-earth pb-2">Ver Metodología <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-24 px-6 bg-black border-y border-white/5">
-        <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-14 lg:gap-24 items-center">
-            <div class="space-y-7 text-center lg:text-left">
-                <span class="text-earth text-[10px] font-black uppercase tracking-[0.35em]">Contenido educativo</span>
-                <h2 class="text-4xl md:text-5xl font-black uppercase italic tracking-tighter leading-tight">MÁS QUE UN <br><span class="text-earth">ENTRENAMIENTO.</span></h2>
-                <p class="text-zinc-400 text-base md:text-lg leading-relaxed font-light italic max-w-xl mx-auto lg:mx-0">Un espacio para aprender, entrenar con criterio y tomar mejores decisiones sobre tu cuerpo, tu técnica y tu progreso.</p>
-                <div class="flex flex-wrap gap-6 pt-2 justify-center lg:justify-start">
-                    <a href="noticias.html" class="text-earth font-black text-[11px] tracking-widest uppercase border-b border-earth/40 pb-2 hover:border-earth transition-all">Explorar tips</a>
-                    <a href="descargas.html" class="text-white font-black text-[11px] tracking-widest uppercase border-b border-white/20 pb-2 hover:border-white transition-all">Herramientas gratis</a>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="glass p-7 rounded-xl space-y-4 hover:bg-white/5 transition-all">
+                        <div class="w-12 h-12 rounded-full bg-earth/10 flex items-center justify-center"><i data-lucide="activity" class="w-5 h-5 text-earth"></i></div>
+                        <h3 class="text-white text-sm font-black uppercase tracking-wide">Evaluación</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">Punto de partida claro antes de diseñar el entrenamiento.</p>
+                    </div>
+                    <div class="glass p-7 rounded-xl space-y-4 hover:bg-white/5 transition-all">
+                        <div class="w-12 h-12 rounded-full bg-earth/10 flex items-center justify-center"><i data-lucide="shield-check" class="w-5 h-5 text-earth"></i></div>
+                        <h3 class="text-white text-sm font-black uppercase tracking-wide">Técnica segura</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">Corrección y control para progresar sin improvisar.</p>
+                    </div>
+                    <div class="glass p-7 rounded-xl space-y-4 hover:bg-white/5 transition-all">
+                        <div class="w-12 h-12 rounded-full bg-earth/10 flex items-center justify-center"><i data-lucide="trending-up" class="w-5 h-5 text-earth"></i></div>
+                        <h3 class="text-white text-sm font-black uppercase tracking-wide">Progresión</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">Avance medible, sostenible y adaptado a tu contexto.</p>
+                    </div>
+                    <div class="glass p-7 rounded-xl space-y-4 hover:bg-white/5 transition-all">
+                        <div class="w-12 h-12 rounded-full bg-earth/10 flex items-center justify-center"><i data-lucide="message-circle" class="w-5 h-5 text-earth"></i></div>
+                        <h3 class="text-white text-sm font-black uppercase tracking-wide">Seguimiento</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">Ajustes y acompañamiento para mantener dirección.</p>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div class="glass p-6 rounded-xl space-y-4 hover:bg-white/5 transition-all"><div class="w-11 h-11 rounded-full bg-earth/10 flex items-center justify-center"><i data-lucide="lightbulb" class="w-5 h-5 text-earth"></i></div><h3 class="text-white text-sm font-black uppercase tracking-wide">Tips prácticos</h3><p class="text-zinc-400 text-sm leading-relaxed">Consejos simples para entrenar mejor y evitar errores comunes.</p></div>
-                <div class="glass p-6 rounded-xl space-y-4 hover:bg-white/5 transition-all"><div class="w-11 h-11 rounded-full bg-earth/10 flex items-center justify-center"><i data-lucide="shield-check" class="w-5 h-5 text-earth"></i></div><h3 class="text-white text-sm font-black uppercase tracking-wide">Educación física</h3><p class="text-zinc-400 text-sm leading-relaxed">Información clara para cuidar tu cuerpo y entrenar con criterio.</p></div>
-                <div class="glass p-6 rounded-xl space-y-4 hover:bg-white/5 transition-all"><div class="w-11 h-11 rounded-full bg-earth/10 flex items-center justify-center"><i data-lucide="trending-up" class="w-5 h-5 text-earth"></i></div><h3 class="text-white text-sm font-black uppercase tracking-wide">Progreso real</h3><p class="text-zinc-400 text-sm leading-relaxed">Enfoque en técnica, constancia y resultados sostenibles.</p></div>
-                <div class="glass p-6 rounded-xl space-y-4 hover:bg-white/5 transition-all"><div class="w-11 h-11 rounded-full bg-earth/10 flex items-center justify-center"><i data-lucide="wrench" class="w-5 h-5 text-earth"></i></div><h3 class="text-white text-sm font-black uppercase tracking-wide">Herramientas útiles</h3><p class="text-zinc-400 text-sm leading-relaxed">Recursos descargables para organizar y potenciar tu entrenamiento.</p></div>
+        <!-- FORMACIÓN -->
+        <section class="py-28 px-6 section-editorial border-b border-[#D9D0C3]">
+            <div class="max-w-7xl mx-auto grid lg:grid-cols-[0.35fr_0.65fr] gap-16 items-center">
+                <div class="flex justify-center">
+                    <div class="bg-[#F8F4ED] border border-[#D9D0C3] rounded-[2rem] p-10 shadow-xl">
+                        <img src="Nicolas_11.png" alt="Logo Pontificia Universidad Católica de Chile" class="w-56 md:w-64 opacity-90">
+                    </div>
+                </div>
+
+                <div class="space-y-7 text-center lg:text-left">
+                    <p class="editorial-kicker">Formación académica</p>
+                    <h2 class="editorial-title text-5xl md:text-7xl leading-none text-[#2D2926]">
+                        Ciencia aplicada al entrenamiento.
+                    </h2>
+                    <p class="text-[#4A453F] text-lg md:text-xl leading-relaxed font-light max-w-3xl mx-auto lg:mx-0">
+                        Especialización en Medicina Deportiva y Actividad Física en la Pontificia Universidad Católica de Chile. Entrenamos con criterio, no con suposiciones.
+                    </p>
+                    <a href="metodo.html" class="inline-flex items-center gap-4 text-[#8C7851] font-black text-[10px] tracking-[0.3em] uppercase border-b-2 border-[#8C7851] pb-2">
+                        Profundizar en el método
+                        <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contacto" class="py-32 px-6 bg-earth">
-        <div class="max-w-4xl mx-auto bg-black p-10 md:p-24 rounded-sm shadow-2xl text-center">
-            <h2 class="text-5xl font-black uppercase tracking-tighter italic mb-6">CONTACTO DIRECTO</h2>
-            <p class="text-zinc-400 text-sm mb-12 font-light">La vía más rápida y efectiva para iniciar tu proceso es a través de WhatsApp. Atención personal y directa.</p>
-            <a href="https://wa.me/56978354063?text=Vi%20tu%20p%C3%A1gina%20WEB%20y%20me%20interesa%20tu%20asesor%C3%ADa" target="_blank" rel="noopener noreferrer" class="inline-flex bg-[#25D366] text-white px-12 py-6 rounded-sm font-black uppercase text-[12px] tracking-[0.4em] hover:brightness-110 transition-all shadow-xl italic items-center justify-center gap-4">HABLAR CON NICOLÁS <i data-lucide="message-circle" class="w-6 h-6"></i></a>
-        </div>
-    </section>
+        <!-- CONTENIDO / COMUNIDAD -->
+        <section class="py-28 px-6 bg-black border-y border-white/5">
+            <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-14 lg:gap-24 items-center">
+                <div class="space-y-7 text-center lg:text-left">
+                    <span class="text-earth text-[10px] font-black uppercase tracking-[0.35em]">Contenido & comunidad</span>
+                    <h2 class="text-4xl md:text-6xl font-black uppercase italic tracking-tighter leading-tight text-white">
+                        Más que un <br><span class="text-earth">entrenamiento.</span>
+                    </h2>
+                    <p class="text-zinc-400 text-base md:text-lg leading-relaxed font-light max-w-xl mx-auto lg:mx-0">
+                        Aprende, entrena con criterio y conecta con una comunidad que entiende que la disciplina también se construye en equipo.
+                    </p>
+                    <div class="flex flex-wrap gap-6 pt-2 justify-center lg:justify-start">
+                        <a href="noticias.html" class="text-earth font-black text-[11px] tracking-widest uppercase border-b border-earth/40 pb-2 hover:border-earth transition-all">Explorar tips</a>
+                        <a href="comunidad.html" class="text-white font-black text-[11px] tracking-widest uppercase border-b border-white/20 pb-2 hover:border-white transition-all">Ver comunidad</a>
+                        <a href="tienda.html" class="text-white font-black text-[11px] tracking-widest uppercase border-b border-white/20 pb-2 hover:border-white transition-all">Tienda</a>
+                    </div>
+                </div>
+
+                <div class="relative rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl">
+                    <img src="img_comunidad.png" alt="Comunidad Nicolás Lobos" class="w-full h-[460px] object-cover grayscale hover:grayscale-0 transition-all duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 right-6">
+                        <p class="text-earth text-[10px] font-black uppercase tracking-[0.35em]">Team Lobos</p>
+                        <h3 class="text-white text-3xl font-black uppercase italic mt-2">Cultura, técnica y constancia.</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACTO -->
+        <section id="contacto" class="py-28 px-6 section-editorial">
+            <div class="max-w-4xl mx-auto text-center space-y-8">
+                <p class="editorial-kicker">Contacto directo</p>
+                <h2 class="editorial-title text-5xl md:text-7xl leading-none text-[#2D2926]">
+                    Agenda tu diagnóstico.
+                </h2>
+                <p class="text-[#4A453F] text-lg leading-relaxed max-w-2xl mx-auto">
+                    La vía más rápida y efectiva para iniciar tu proceso es WhatsApp. Atención personal, directa y enfocada en tu objetivo.
+                </p>
+                <a href="https://wa.me/56978354063?text=Vi%20tu%20p%C3%A1gina%20WEB%20y%20me%20interesa%20tu%20asesor%C3%ADa" target="_blank" rel="noopener noreferrer" class="inline-flex bg-[#25D366] text-white px-12 py-6 rounded-full font-black uppercase text-[12px] tracking-[0.35em] hover:brightness-110 transition-all shadow-xl items-center justify-center gap-4">
+                    Hablar con Nicolás
+                    <i data-lucide="message-circle" class="w-6 h-6"></i>
+                </a>
+            </div>
+        </section>
+
+    </main>
 
     <footer class="py-16 bg-black px-6 text-center border-t border-white/5">
         <p class="text-[12px] text-white uppercase tracking-[0.2em]">
@@ -160,21 +343,11 @@
         </p>
     </footer>
 
-    <a href="https://wa.me/56978354063?text=Vi%20tu%20p%C3%A1gina%20WEB%20y%20me%20interesa%20tu%20asesor%C3%ADa" target="_blank" rel="noopener noreferrer" class="fixed bottom-10 right-10 bg-[#25D366] text-white p-5 rounded-full shadow-[0_0_20px_rgba(37,211,102,0.3)] hover:scale-110 transition-all z-[200]"><i data-lucide="message-circle" class="w-8 h-8"></i></a>
+    <a href="https://wa.me/56978354063?text=Vi%20tu%20p%C3%A1gina%20WEB%20y%20me%20interesa%20tu%20asesor%C3%ADa" target="_blank" rel="noopener noreferrer" class="fixed bottom-10 right-10 bg-[#25D366] text-white p-5 rounded-full shadow-[0_0_20px_rgba(37,211,102,0.3)] hover:scale-110 transition-all z-[200]">
+        <i data-lucide="message-circle" class="w-8 h-8"></i>
+    </a>
 
-    <script>
-        lucide.createIcons();
-
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        if (mobileMenuBtn && mobileMenu) {
-            mobileMenuBtn.addEventListener('click', () => {
-                const isHidden = mobileMenu.classList.toggle('hidden');
-                mobileMenuBtn.setAttribute('aria-expanded', String(!isHidden));
-            });
-        }
-    </script>
+    <script src="js/main.js"></script>
 
 </body>
 </html>
