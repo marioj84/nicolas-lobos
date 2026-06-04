@@ -1,0 +1,40 @@
+/* =========================================================
+   EDITORIAL THEME
+   Inspiración boutique premium.
+   ========================================================= */
+
+:root {
+    --editorial-bg: #F3EFE8;
+    --editorial-bg-soft: #F8F4ED;
+    --editorial-text: #2D2926;
+    --editorial-accent: #8C7851;
+    --editorial-border: #D9D0C3;
+}
+
+.section-editorial {
+    background: var(--editorial-bg);
+    color: var(--editorial-text);
+}
+
+.editorial-card {
+    background: var(--editorial-bg-soft);
+    border: 1px solid var(--editorial-border);
+    border-radius: 32px;
+}
+
+.editorial-title {
+    font-family: var(--font-serif);
+    letter-spacing: 0.02em;
+}
+
+.editorial-kicker {
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    font-size: 11px;
+    color: #8f8576;
+}
+
+.editorial-price {
+    font-family: var(--font-serif);
+    font-weight: 700;
+}
